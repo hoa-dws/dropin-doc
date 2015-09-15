@@ -22,6 +22,32 @@ post /login
 | phone     | true | string |
 | token      | true        |   string |
 
+#### Response
+
+| params  |  type |
+| :------------:|:-----:|
+| account     | string |
+| code      | string |
+| code      | ['unverified','verified','expired'] |
+| expiredOn      | date |
+| createdAt      | date |
+| updatedAt      | date |
+
+
+### Verify token
+```javascript
+post /verify
+```
+#### Body
+| params  | required  | type |
+| :------------: |:---------------:| :-----:|
+| code     | true | string |
+
+
+#### Response
+Token object with infomation
+
+
 ## <a name="Registration">Registration</a>
 ### Create new account
 ```javascript
@@ -49,3 +75,6 @@ post /accounts
 | value     | true        |   string |
 | archive     | false        |   boolean |
 | status     | false        |   ['unverified','verified','cancelled','expired'], default: 'unverified' |
+
+#### Response
+Newly created account object
