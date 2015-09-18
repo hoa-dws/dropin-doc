@@ -10,17 +10,8 @@ post /login
 | params  | required  | type |
 | :------------: |:---------------:| :-----:|
 | email      | true | string: email |
-| token     | true        |   string |
+| phone     | true        |   string |
 
-### Login with phone
-```javascript
-post /login
-```
-#### Body
-| params  | required  | type |
-| :------------: |:---------------:| :-----:|
-| phone     | true | string |
-| token      | true        |   string |
 
 #### Response
 
@@ -28,7 +19,6 @@ post /login
 | :------------:|:-----:|
 | account     | string |
 | code      | string |
-| code      | ['unverified','verified','expired'] |
 | expiredOn      | date |
 | createdAt      | date |
 | updatedAt      | date |
