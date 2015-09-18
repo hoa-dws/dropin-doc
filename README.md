@@ -51,7 +51,7 @@ Token object with infomation
 ## <a name="Registration">Registration</a>
 ### Create new account
 ```javascript
-post /accounts
+post /signup
 ```
 #### Body
 | params  | required  | type |
