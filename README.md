@@ -1,6 +1,7 @@
 # dropin-doc
 ## [Registration](#Registration)
 ## [Authorization](#Authorization)
+## [Device](#Device)
 ## <a name="Authorization">Authorization</a>
 ### Login with email
 ```javascript
@@ -9,7 +10,7 @@ post /login
 #### Body
 | params  | required  | type |
 | :------------: |:---------------:| :-----:|
-| email      | true | string: email |
+| email      | true | string |
 | phone     | true        |   string |
 
 
@@ -68,3 +69,36 @@ post /signup
 
 #### Response
 Newly created account object
+
+## <a name="Device">Device</a>
+### Add new device 
+```javascript
+post /adddevice
+```
+#### Prerequisite: User already login
+#### Body
+| params  | required  | type |
+| :------------: |:---------------:| :-----:|
+| deviceAddress      | true | string |
+| deviceType     | true        |   string |
+
+
+#### Response
+* OK: Status 200
+* Failed: Status 400 or 500
+
+### Remove device 
+```javascript
+post /removedevice
+```
+#### Prerequisite: User already login
+#### Body
+| params  | required  | type |
+| :------------: |:---------------:| :-----:|
+| deviceAddress      | true | string |
+
+
+#### Response
+* OK: Status 200
+* Failed: Status 400 or 500
+
