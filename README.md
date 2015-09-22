@@ -193,11 +193,12 @@ post /notifications/send
 }
 ```
 #### Body
+```javascript
 {
   "recipientId":"5560122297db2f56e35887d76", //id of account to send
   "message":"Test"
 }
-    
+```
 
 #### Response
 * OK: Status 200
