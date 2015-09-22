@@ -29,7 +29,7 @@ post /login
 ```
 ### Verify token
 ```javascript
-post /verify
+post /login/verify
 ```
 #### Body
 ```javascript
