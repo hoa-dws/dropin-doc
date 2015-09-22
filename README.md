@@ -181,7 +181,7 @@ post /adddevice
 }
 ```
 
-### Send notification (currently working on android only)
+### Send notification (currently working on android only, ios needs to implement accordingly to work)
 ```javascript
 post /notifications/send
 ```
