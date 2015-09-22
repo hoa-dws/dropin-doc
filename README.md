@@ -179,7 +179,7 @@ post /adddevice
     "updatedAt": "2015-09-22T09:30:31.767Z",
     "id": "56011fb77db2f56e35887d74"
 }
-```javascript
+```
 
 ### Send notification (currently working on android only)
 ```javascript
