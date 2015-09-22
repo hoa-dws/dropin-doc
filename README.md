@@ -150,7 +150,7 @@ post /accounts
 ## <a name="Device">Device</a>
 ### Add new device to an account
 ```javascript
-post /adddevice
+post /devices/add
 ```
 #### Headers
 ```javascript
