@@ -42,33 +42,76 @@ Token object with infomation
 ## <a name="Registration">Registration</a>
 ### Create new account
 ```javascript
-post /signup
+post /accounts
 ```
 #### Body
-| params  | required  | type |
-| :------------: |:---------------:| :-----:|
-| firstName     | true | string |
-| lastName     | true        |   string |
-| street     | false        |   string |
-| city     | false        |   string |
-| state     | false        |   string |
-| country     | false        |   string |
-| language     | false        |   string |
-| archive     | false        |   boolean |
-| status     | false        |   ['active','banned'], default: 'active' |
-| type    | false        |   ['robot', 'trial', 'user', 'consumer', 'tester', 'customerSupport', 'admin'], default: 'trial' |
-| identities     | true        |   [{ObjectIdentity}] |
-
-#### ObjectIndentity
- params  | required  | type |
-| :------------: |:---------------:| :-----:|
-| type     | true | ['email','phone','facebook','gmail','twitter','linkedin'] |
-| value     | true        |   string |
-| archive     | false        |   boolean |
-| status     | false        |   ['unverified','verified','cancelled','expired'], default: 'unverified' |
+```javascript
+{
+  "firstName": "hoa", //String, REQUIRED
+  "lastName": "nguyen",  //String, REQUIRED
+  "state":"CA",
+  "country":"Vietnam",
+  "city":"Saigon",
+  "street":"Test street",
+  "language":"VI",
+  "archive":false, // [true, false]
+  "status":"active", // ['active', 'banned'] 
+  "type":"user",  // ['robot', 'trial', 'user', 'consumer', 'tester', 'customerSupport', 'admin']
+  "identities": [ //There must be two elements, REQUIRED
+    {
+      "value": "123456", //String, REQUIRED
+      "type": "phone" //String, REQUIRED
+    },
+    {
+      "value": "abcdef", //String, REQUIRED
+      "type": "email" //String, REQUIRED
+    }
+  ]
+}
+```
 
 #### Response
-Newly created account object
+```javascript
+{
+    "token": {
+        "account": "56011e197db2f56e35887d6f",
+        "attempts": 0,
+        "status": "unverified",
+        "expiresOn": "2015-09-22T09:53:37.516Z",
+        "code": "4478",
+        "createdAt": "2015-09-22T09:23:37.517Z",
+        "updatedAt": "2015-09-22T09:23:37.517Z",
+        "id": "56011e197db2f56e35887d72"
+    },
+    "account": {
+        "identities": [
+            {
+                "value": "12345678",
+                "type": "phone",
+                "status": "unverified",
+                "createdAt": "2015-09-22T09:23:37.495Z",
+                "updatedAt": "2015-09-22T09:23:37.495Z",
+                "id": "56011e197db2f56e35887d70"
+            },
+            {
+                "value": "abcdefgh",
+                "type": "email",
+                "status": "unverified",
+                "createdAt": "2015-09-22T09:23:37.495Z",
+                "updatedAt": "2015-09-22T09:23:37.495Z",
+                "id": "56011e197db2f56e35887d71"
+            }
+        ],
+        "firstName": "hoa",
+        "lastName": "nguyen",
+        "status": "active",
+        "type": "user",
+        "createdAt": "2015-09-22T09:23:37.486Z",
+        "updatedAt": "2015-09-22T09:23:37.490Z",
+        "id": "56011e197db2f56e35887d6f"
+    }
+}
+```
 
 ## <a name="Device">Device</a>
 ### Add new device 
