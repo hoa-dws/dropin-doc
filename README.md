@@ -110,8 +110,8 @@ post /login/verify
 #### Body
 ```javascript
 {
-  "tokenId":"56011ee57db2f56e35887d73",
-  "code":"0643"
+  "tokenId":"56011ee57db2f56e35887d73", //String, REQUIRED
+  "code":"0643" //String, REQUIRED
 }
 ```
 
@@ -198,8 +198,8 @@ post /notifications/send
 #### Body
 ```javascript
 {
-  "recipientId":"5560122297db2f56e35887d76", //id of account to send
-  "message":"Test"
+  "recipientId":"5560122297db2f56e35887d76", //id of account to send, String, REQUIRED
+  "message":"Test" //messge to be sent, String, REQUIRED
 }
 ```
 
