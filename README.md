@@ -2,77 +2,8 @@
 ## [Registration](#Registration)
 ## [Authorization](#Authorization)
 ## [Device](#Device)
-## <a name="Authorization">Authorization</a>
-### Login with email
-```javascript
-post /login
-```
-#### Body
-```javascript
-{
-  "phone":"12345678", //String, REQUIRED
-  "email":"abcdefgh" //String, REQUIRED
-}
-```
-#### Response
-```javascript
-{
-    "account": "56011e197db2f56e35887d6f",
-    "attempts": 0,
-    "status": "unverified",
-    "expiresOn": "2015-09-22T09:57:01.191Z",
-    "code": "0643", //Save this field for latter verification
-    "createdAt": "2015-09-22T09:27:01.191Z",
-    "updatedAt": "2015-09-22T09:27:01.191Z",
-    "id": "56011ee57db2f56e35887d73" //Save this field for latter verification
-}
-```
-### Verify token
-```javascript
-post /login/verify
-```
-#### Body
-```javascript
-{
-  "tokenId":"56011ee57db2f56e35887d73",
-  "code":"0643"
-}
-```
+## [Map](#Map)
 
-#### Response
-```javascript
-{
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk",
-    //save this field for authorize API
-    "account": {
-        "identities": [
-            {
-                "value": "12345678",
-                "type": "phone",
-                "status": "unverified",
-                "createdAt": "2015-09-22T09:23:37.495Z",
-                "updatedAt": "2015-09-22T09:23:37.495Z",
-                "id": "56011e197db2f56e35887d70"
-            },
-            {
-                "value": "abcdefgh",
-                "type": "email",
-                "status": "unverified",
-                "createdAt": "2015-09-22T09:23:37.495Z",
-                "updatedAt": "2015-09-22T09:23:37.495Z",
-                "id": "56011e197db2f56e35887d71"
-            }
-        ],
-        "firstName": "hoa",
-        "lastName": "nguyen",
-        "status": "active",
-        "type": "user",
-        "createdAt": "2015-09-22T09:23:37.486Z",
-        "updatedAt": "2015-09-22T09:23:37.490Z",
-        "id": "56011e197db2f56e35887d6f"
-    }
-}
-```
 ## <a name="Registration">Registration</a>
 ### Create new account
 ```javascript
@@ -146,7 +77,77 @@ post /accounts
     }
 }
 ```
+## <a name="Authorization">Authorization</a>
+### Login with email
+```javascript
+post /login
+```
+#### Body
+```javascript
+{
+  "phone":"12345678", //String, REQUIRED
+  "email":"abcdefgh" //String, REQUIRED
+}
+```
+#### Response
+```javascript
+{
+    "account": "56011e197db2f56e35887d6f",
+    "attempts": 0,
+    "status": "unverified",
+    "expiresOn": "2015-09-22T09:57:01.191Z",
+    "code": "0643", //Save this field for latter verification
+    "createdAt": "2015-09-22T09:27:01.191Z",
+    "updatedAt": "2015-09-22T09:27:01.191Z",
+    "id": "56011ee57db2f56e35887d73" //Save this field for latter verification
+}
+```
+### Verify token
+```javascript
+post /login/verify
+```
+#### Body
+```javascript
+{
+  "tokenId":"56011ee57db2f56e35887d73",
+  "code":"0643"
+}
+```
 
+#### Response
+```javascript
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk",
+    //save this field for authorize API
+    "account": {
+        "identities": [
+            {
+                "value": "12345678",
+                "type": "phone",
+                "status": "unverified",
+                "createdAt": "2015-09-22T09:23:37.495Z",
+                "updatedAt": "2015-09-22T09:23:37.495Z",
+                "id": "56011e197db2f56e35887d70"
+            },
+            {
+                "value": "abcdefgh",
+                "type": "email",
+                "status": "unverified",
+                "createdAt": "2015-09-22T09:23:37.495Z",
+                "updatedAt": "2015-09-22T09:23:37.495Z",
+                "id": "56011e197db2f56e35887d71"
+            }
+        ],
+        "firstName": "hoa",
+        "lastName": "nguyen",
+        "status": "active",
+        "type": "user",
+        "createdAt": "2015-09-22T09:23:37.486Z",
+        "updatedAt": "2015-09-22T09:23:37.490Z",
+        "id": "56011e197db2f56e35887d6f"
+    }
+}
+```
 ## <a name="Device">Device</a>
 ### Add new device to an account
 ```javascript
@@ -204,3 +205,24 @@ post /notifications/send
 * OK: Status 200
 * Failed: Status 400 or 500
 
+## <a name="Map">Map</a>
+### Get default location
+```javascript
+post /map/location/default
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Response
+```javascript
+{
+   
+  "lat":40.24,
+  "lng":50.24
+  
+}
+```
