@@ -2,6 +2,7 @@
 ## [Registration](#Registration)
 ## [Authorization](#Authorization)
 ## [Device](#Device)
+## [Notification](#Notification)
 ## [Map](#Map)
 
 ## <a name="Registration">Registration</a>
@@ -181,6 +182,7 @@ post /devices/add
     "id": "56011fb77db2f56e35887d74"
 }
 ```
+## <a name="Notification">Notification</a>
 
 ### Send notification (currently working on android only, ios needs to implement accordingly to work)
 ```javascript
