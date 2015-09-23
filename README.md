@@ -228,3 +228,35 @@ post /map/location/default
   
 }
 ```
+### Add new location to account
+```javascript
+post /map
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Body
+```javascript
+{
+  "longitude":40.24, //Float, REQUIRED
+  "latitude":50.24 //Float, REQUIRED
+}
+```
+#### Response
+```javascript
+{
+    "latitude": 123,
+    "longitude": 123456,
+    "account": "5601274dd47400694e8c0682",
+    "archive": false,
+    "visibility": "private",
+    "type": "real",
+    "createdAt": "2015-09-23T07:58:19.667Z",
+    "updatedAt": "2015-09-23T07:58:19.667Z",
+    "id": "56025b9b4f19fd534de2fc28"
+}
+```
