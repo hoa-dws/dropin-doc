@@ -273,7 +273,7 @@ post /map
 ```
 ### Search for operators in 2,000m radius (default by server)
 ```javascript
-post /map/operators
+get /map/operators
 ```
 #### Headers
 ```javascript
