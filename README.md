@@ -1,3 +1,4 @@
+# NOTE: For manually testing, please add ?debug=true at the end each request made to get full info.
 # dropin-doc
 ## [Registration](#Registration)
 ## [Authorization](#Authorization)
