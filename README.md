@@ -271,3 +271,56 @@ post /map
     "id": "56025b9b4f19fd534de2fc28"
 }
 ```
+### Search for operators in 2,000m radius (default by server)
+```javascript
+post /map/operators
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Query
+```javascript
+{
+  "long":40.24, //Float, REQUIRED
+  "lat":50.24 //Float, REQUIRED
+}
+```
+#### Response
+```javascript
+[
+    {
+        "firstName": "hoa",
+        "lastName": "nguyen",
+        "archive": false,
+        "status": "active",
+        "type": "user",
+        "createdAt": "2015-09-22T08:49:46.021Z",
+        "updatedAt": "2015-09-22T08:49:46.033Z",
+        "id": "5601162a04bff45c1cc93ca7",
+        "location": {
+            "lastTime": "2015-09-23T07:20:56.108Z",
+            "latitude": 1234.56,
+            "longitude": 124.56
+        }
+    },
+    {
+        "firstName": "hoa1",
+        "lastName": "nguyen1",
+        "archive": false,
+        "status": "active",
+        "type": "user",
+        "createdAt": "2015-09-22T08:49:46.021Z",
+        "updatedAt": "2015-09-22T08:49:46.033Z",
+        "id": "5601162a04bff45c1cc93ca7",
+        "location": {
+            "lastTime": "2015-09-23T07:20:56.108Z",
+            "latitude": 12343.56,
+            "longitude": 1243.56
+        }
+    }
+]
+```
