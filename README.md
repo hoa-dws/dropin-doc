@@ -47,7 +47,11 @@ post /accounts
         "code": "4478", //Save this field for latter verification
         "createdAt": "2015-09-22T09:23:37.517Z",
         "updatedAt": "2015-09-22T09:23:37.517Z",
-        "id": "56011e197db2f56e35887d72" //Save this field for latter verification
+        "id": "56011e197db2f56e35887d72", //Save this field for latter verification,
+        "location": {
+            "lat": 34.0851002, //Default latitude
+            "lng": -118.3768646 //Default longitude
+        }
     },
     "account": {
         "identities": [
@@ -79,7 +83,7 @@ post /accounts
 }
 ```
 ## <a name="Authorization">Authorization</a>
-### Login with email
+### Login
 ```javascript
 post /login
 ```
@@ -100,7 +104,11 @@ post /login
     "code": "0643", //Save this field for latter verification
     "createdAt": "2015-09-22T09:27:01.191Z",
     "updatedAt": "2015-09-22T09:27:01.191Z",
-    "id": "56011ee57db2f56e35887d73" //Save this field for latter verification
+    "id": "56011ee57db2f56e35887d73", //Save this field for latter verification
+     "location": {
+            "lat": 34.0851002, //Default latitude
+            "lng": -118.3768646 //Default longitude
+        }
 }
 ```
 ### Verify token
@@ -111,7 +119,9 @@ post /login/verify
 ```javascript
 {
   "tokenId":"56011ee57db2f56e35887d73", //String, REQUIRED
-  "code":"0643" //String, REQUIRED
+  "code":"0643", //String, REQUIRED
+  "deviceAddress": "APA91bF4S5VIv9bg8katkkkh_4XJxI8j0efT5Dodgf95fVUSVsWbKZGyHgLwvOooJn1I-yjgbht91dM0yvSHqiY_l-a1No6gY9_2tQbUropwzrBfAcJCDgYlqQCxiSmEWJY8nataDmAy",
+  "deviceType":"android" // ['android','ios']
 }
 ```
 
@@ -184,7 +194,7 @@ post /devices/add
 ```
 ## <a name="Notification">Notification</a>
 
-### Send notification (currently working on android only, ios needs to implement accordingly to work)
+### Send notification (working on both android and ios)
 ```javascript
 post /notifications/send
 ```
