@@ -432,36 +432,13 @@ Patch /accounts/:accountId
 #### Response
 ```javascript
 {
-    "token": {
-        "account": "56011e197db2f56e35887d6f",
-        "attempts": 0,
-        "status": "unverified",
-        "expiresOn": "2015-09-22T09:53:37.516Z",
-        "code": "4478", //Save this field for latter verification
-        "createdAt": "2015-09-22T09:23:37.517Z",
-        "updatedAt": "2015-09-22T09:23:37.517Z",
-        "id": "56011e197db2f56e35887d72", //Save this field for latter verification,
-        "location": {
-            "lat": 34.0851002, //Default latitude
-            "lng": -118.3768646 //Default longitude
-        }
-    },
-    "account": {
-        "identities": [
+   "identities": [
             {
-                "value": "12345678",
-                "type": "phone",
-                "status": "unverified",
-                "createdAt": "2015-09-22T09:23:37.495Z",
-                "updatedAt": "2015-09-22T09:23:37.495Z",
+              
                 "id": "56011e197db2f56e35887d70"
             },
             {
-                "value": "abcdefgh",
-                "type": "email",
-                "status": "unverified",
-                "createdAt": "2015-09-22T09:23:37.495Z",
-                "updatedAt": "2015-09-22T09:23:37.495Z",
+              
                 "id": "56011e197db2f56e35887d71"
             }
         ],
@@ -472,6 +449,5 @@ Patch /accounts/:accountId
         "createdAt": "2015-09-22T09:23:37.486Z",
         "updatedAt": "2015-09-22T09:23:37.490Z",
         "id": "56011e197db2f56e35887d6f"
-    }
 }
 ```
