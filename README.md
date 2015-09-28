@@ -18,7 +18,16 @@
 * [Send notification](#send_notification)
 
 ## [Map](#Map)
+
+* [Get default location](#get_default_location)
+* [Update new location to account](#add_new_location)
+* [Search for operator](#search_for_operator)
+* [Get profile of operator](#get_profile_operator)
+* [Choose default operator](#choose_default_operator)
+
 ## [Profile](#Profile)
+
+* [Update account profile](#update_account_profile)
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -233,7 +242,7 @@ post /notifications/send
 * Failed: Status 400 or 500
 
 ## <a name="Map">Map</a>
-### Get default location
+### <a name='get_default_location'>Get default location</a>
 ```javascript
 post /map/location/default
 ```
@@ -253,7 +262,7 @@ post /map/location/default
   
 }
 ```
-### Add new location to account
+### <a name='add_new_location'>Add new location to account</a>
 ```javascript
 post /map
 ```
@@ -285,7 +294,7 @@ post /map
     "id": "56025b9b4f19fd534de2fc28"
 }
 ```
-### Search for operators in 2,000m radius (default by server)
+### <a 'name='search_for_operator>Search for operators in 2,000m radius (default by server)</a>
 ```javascript
 get /map/operators
 ```
@@ -338,7 +347,7 @@ get /map/operators
     }
 ]
 ```
-### Get profile of operator
+### <a name='get_profile_operator>Get profile of operator</a>
 ```javascript
 get /map/operators/profile
 ```
@@ -378,7 +387,7 @@ get /map/operators/profile
     }
 }
 ```
-### Choose default operator
+### <a name='choose_default_operator>Choose default operator</a>
 ```javascript
 post /map/operators/choosedefault
 ```
@@ -419,7 +428,7 @@ post /map/operators/choosedefault
 
 ### Note: Body *id* must match with params *id*
 
-### Update account
+### <a name='update_account_profile'>Update account</a>
 ```javascript
 Patch /accounts/:accountId
 ```
