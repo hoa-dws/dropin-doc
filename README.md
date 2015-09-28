@@ -10,7 +10,13 @@
 * [Verify](#verify)
 
 ## [Device](#Device)
+
+* [Add new device](#new_device)
+
 ## [Notification](#Notification)
+
+* [Send notification](#send_notification)
+
 ## [Map](#Map)
 ## [Profile](#Profile)
 
@@ -169,7 +175,7 @@ post /login/verify
 }
 ```
 ## <a name="Device">Device</a>
-### Add new device to an account
+### <a name='new_device'>Add new device to an account</a>
 ```javascript
 post /devices/add
 ```
@@ -203,7 +209,7 @@ post /devices/add
 ```
 ## <a name="Notification">Notification</a>
 
-### Send notification (working on both android and ios)
+### <a name='send_notification'>Send notification (working on both android and ios)</a>
 ```javascript
 post /notifications/send
 ```
