@@ -1,6 +1,9 @@
 # NOTE: For manually testing, please add ?debug=true at the end each request made to get full info.
 # dropin-doc
 ## [Registration](#Registration)
+
+* [Create new account](#new_account)
+
 ## [Authorization](#Authorization)
 ## [Device](#Device)
 ## [Notification](#Notification)
@@ -8,7 +11,7 @@
 ## [Profile](#Profile)
 
 ## <a name="Registration">Registration</a>
-### Create new account
+### <a name="new_account">Create new account </a>
 ```javascript
 post /accounts
 ```
