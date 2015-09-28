@@ -366,7 +366,7 @@ get /map/operators/profile
 ```
 ### Choose default operator
 ```javascript
-get /map/operators/choosedefault
+post /map/operators/choosedefault
 ```
 #### Headers
 ```javascript
