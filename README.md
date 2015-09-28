@@ -5,6 +5,10 @@
 * [Create new account](#new_account)
 
 ## [Authorization](#Authorization)
+
+* [Login](#login)
+* [Verify](#verify)
+
 ## [Device](#Device)
 ## [Notification](#Notification)
 ## [Map](#Map)
@@ -88,7 +92,7 @@ post /accounts
 }
 ```
 ## <a name="Authorization">Authorization</a>
-### Login
+### <a name='login'>Login</a>
 ```javascript
 post /login
 ```
@@ -116,7 +120,7 @@ post /login
         }
 }
 ```
-### Verify token
+### <a name='verify'>Verify token</a>
 ```javascript
 post /login/verify
 ```
