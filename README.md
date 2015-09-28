@@ -294,7 +294,7 @@ post /map
     "id": "56025b9b4f19fd534de2fc28"
 }
 ```
-### <a 'name='search_for_operator'>Search for operators in 2,000m radius (default by server)</a>
+### <a name='search_for_operator'>Search for operators in 2,000m radius (default by server)</a>
 ```javascript
 get /map/operators
 ```
