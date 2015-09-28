@@ -347,7 +347,7 @@ get /map/operators
     }
 ]
 ```
-### <a name='get_profile_operator>Get profile of operator</a>
+### <a name='get_profile_operator'>Get profile of operator</a>
 ```javascript
 get /map/operators/profile
 ```
@@ -387,7 +387,7 @@ get /map/operators/profile
     }
 }
 ```
-### <a name='choose_default_operator>Choose default operator</a>
+### <a name='choose_default_operator'>Choose default operator</a>
 ```javascript
 post /map/operators/choosedefault
 ```
