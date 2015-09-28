@@ -324,3 +324,43 @@ get /map/operators
     }
 ]
 ```
+### Get profile of operator
+```javascript
+get /map/operators/profile
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Query
+```javascript
+{
+  "accountId":"4gfdgfddfdfdf", //String, REQUIRED
+}
+```
+#### Response
+```javascript
+{
+    "account": {
+        "firstName": "hoa",
+        "lastName": "nguyen",
+        "archive": false,
+        "status": "active",
+        "type": "user",
+        "createdAt": "2015-09-28T03:30:26.212Z",
+        "updatedAt": "2015-09-28T03:30:26.219Z",
+        "id": "5608b452dbb0a09419db1d1a"
+    },
+    "operator": {
+        "account": "5608b452dbb0a09419db1d1a",
+        "createdAt": "2015-09-28T03:53:07.786Z",
+        "taxFormId":Not yet generated, will update later, please use fake data,
+        "vendorId":Not yet generated, will update later, please use fake data
+        "updatedAt": "2015-09-28T03:53:07.786Z",
+        "id": "5608b9a34e8a66640c369df9"
+    }
+}
+```
