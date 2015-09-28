@@ -5,6 +5,7 @@
 ## [Device](#Device)
 ## [Notification](#Notification)
 ## [Map](#Map)
+## [Profile](#Profile)
 
 ## <a name="Registration">Registration</a>
 ### Create new account
@@ -398,6 +399,79 @@ post /map/operators/choosedefault
         "latitude": 14.00000050663948,
         "longitude": 14.000001847743988,
         "distance": 1080
+    }
+}
+```
+## <a name="Profile">Profile</a>
+
+### Note: Body *id* must match with params *id*
+
+### Update account
+```javascript
+Patch /accounts/:accountId
+```
+#### Body
+```javascript
+{
+  "id":"4535435gsgfewg54"
+  "firstName": "hoa", //String, REQUIRED
+  "lastName": "nguyen",  //String, REQUIRED
+  "state":"CA",
+  "country":"Vietnam",
+  "city":"Saigon",
+  "street":"Test street",
+  "language":"VI"
+}
+```
+#### Params
+```javascript
+{
+  "accountId":"4535435gsgfewg54"
+ }
+```
+#### Response
+```javascript
+{
+    "token": {
+        "account": "56011e197db2f56e35887d6f",
+        "attempts": 0,
+        "status": "unverified",
+        "expiresOn": "2015-09-22T09:53:37.516Z",
+        "code": "4478", //Save this field for latter verification
+        "createdAt": "2015-09-22T09:23:37.517Z",
+        "updatedAt": "2015-09-22T09:23:37.517Z",
+        "id": "56011e197db2f56e35887d72", //Save this field for latter verification,
+        "location": {
+            "lat": 34.0851002, //Default latitude
+            "lng": -118.3768646 //Default longitude
+        }
+    },
+    "account": {
+        "identities": [
+            {
+                "value": "12345678",
+                "type": "phone",
+                "status": "unverified",
+                "createdAt": "2015-09-22T09:23:37.495Z",
+                "updatedAt": "2015-09-22T09:23:37.495Z",
+                "id": "56011e197db2f56e35887d70"
+            },
+            {
+                "value": "abcdefgh",
+                "type": "email",
+                "status": "unverified",
+                "createdAt": "2015-09-22T09:23:37.495Z",
+                "updatedAt": "2015-09-22T09:23:37.495Z",
+                "id": "56011e197db2f56e35887d71"
+            }
+        ],
+        "firstName": "hoa",
+        "lastName": "nguyen",
+        "status": "active",
+        "type": "user",
+        "createdAt": "2015-09-22T09:23:37.486Z",
+        "updatedAt": "2015-09-22T09:23:37.490Z",
+        "id": "56011e197db2f56e35887d6f"
     }
 }
 ```
