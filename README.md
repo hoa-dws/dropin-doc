@@ -364,3 +364,40 @@ get /map/operators/profile
     }
 }
 ```
+### Choose default operator
+```javascript
+get /map/operators/choosedefault
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Body
+```javascript
+{
+  "long":40.24, //Float, REQUIRED
+  "lat":50.24 //Float, REQUIRED
+}
+```
+#### Response
+```javascript
+{
+    "firstName": "hoa",
+    "lastName": "nguyen",
+    "archive": false,
+    "status": "active",
+    "type": "user",
+    "createdAt": "2015-09-28T03:22:42.644Z",
+    "updatedAt": "2015-09-28T03:22:42.657Z",
+    "id": "5608b282c0dc92481bd93c5d",
+    "location": {
+        "key": "5608b282c0dc92481bd93c5d",
+        "latitude": 14.00000050663948,
+        "longitude": 14.000001847743988,
+        "distance": 1080
+    }
+}
+```
