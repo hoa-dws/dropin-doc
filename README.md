@@ -143,9 +143,7 @@ post /login/verify
 ```javascript
 {
   "tokenId":"56011ee57db2f56e35887d73", //String, REQUIRED
-  "code":"0643", //String, REQUIRED
-  "deviceAddress": "APA91bF4S5VIv9bg8katkkkh_4XJxI8j0efT5Dodgf95fVUSVsWbKZGyHgLwvOooJn1I-yjgbht91dM0yvSHqiY_l-a1No6gY9_2tQbUropwzrBfAcJCDgYlqQCxiSmEWJY8nataDmAy",
-  "deviceType":"android" // ['android','ios']
+  "code":"0643"
 }
 ```
 
