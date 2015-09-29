@@ -26,7 +26,7 @@
 * [Choose default operator](#choose_default_operator)
 
 ## [Profile](#Profile)
-
+* [Get account profile](#get_account_profile)
 * [Update account profile](#update_account_profile)
 
 ## <a name="Registration">Registration</a>
@@ -432,6 +432,14 @@ post /map/operators/choosedefault
 ```javascript
 Patch /accounts/:accountId
 ```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
 #### Body
 ```javascript
 {
@@ -471,5 +479,54 @@ Patch /accounts/:accountId
         "createdAt": "2015-09-22T09:23:37.486Z",
         "updatedAt": "2015-09-22T09:23:37.490Z",
         "id": "56011e197db2f56e35887d6f"
+}
+```
+
+### <a name='get_account_profile'>Get account</a>
+```javascript
+get /accounts/:accountId
+```
+
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+```javascript
+{
+    "identities": [
+        {
+            "value": "123",
+            "type": "phone",
+            "account": "5608c5588a4e36915d59c9d2",
+            "archive": false,
+            "status": "unverified",
+            "createdAt": "2015-09-28T04:43:04.822Z",
+            "updatedAt": "2015-09-28T04:43:04.822Z",
+            "id": "5608c5588a4e36915d59c9d3"
+        },
+        {
+            "value": "abc",
+            "type": "email",
+            "account": "5608c5588a4e36915d59c9d2",
+            "archive": false,
+            "status": "unverified",
+            "createdAt": "2015-09-28T04:43:04.826Z",
+            "updatedAt": "2015-09-28T04:43:04.826Z",
+            "id": "5608c5588a4e36915d59c9d4"
+        }
+    ],
+    "firstName": "hoa",
+    "lastName": "nguyen",
+    "archive": false,
+    "status": "active",
+    "type": "user",
+    "createdAt": "2015-09-28T04:43:04.773Z",
+    "updatedAt": "2015-09-28T04:43:04.804Z",
+    "id": "5608c5588a4e36915d59c9d2"
 }
 ```
