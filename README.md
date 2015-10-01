@@ -32,6 +32,11 @@
 * [Get account profile](#get_account_profile)
 * [Update account profile](#update_account_profile)
 
+## [Setting](#Setting)
+* [Get account setting](#get_account_setting)
+* [Update account setting](#update_account_setting)
+
+
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
 ```javascript
@@ -591,7 +596,7 @@ Patch /accounts/:accountId
 }
 ```
 
-### <a name='get_account_profile'>Get account</a>
+### <a name='get_account_profile'>Get account profile</a>
 ```javascript
 get /accounts/:accountId
 ```
@@ -638,4 +643,64 @@ get /accounts/:accountId
     "updatedAt": "2015-09-28T04:43:04.804Z",
     "id": "5608c5588a4e36915d59c9d2"
 }
+```
+
+## <a name="Setting">Setting</a>
+
+### <a name='get_account_setting'>Get account setting</a>
+```javascript
+get /accountsetting
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+```javascript
+{
+    "account": "560d0eb9ff4f0358a035d6a7",
+    "detectRadius": 1000,
+    "defaultLatitude": 34.0851002,
+    "defaultLongitude": -118.3768646,
+    "createdAt": "2015-10-01T19:24:56.305Z",
+    "updatedAt": "2015-10-01T19:24:56.305Z",
+    "id": "560d88881b2627e2f06e80e3"
+}
+```
+
+### <a name='update_account_setting'>Update account setting</a>
+```javascript
+post /accountsetting
+```
+
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Body
+```javascript
+{
+  "detectRadius":40000,
+  "defaultLatitude":12.23,
+  "defaultLongitude":12.24
+}
+```
+#### Response
+```javascript
+[{
+    "account": "560d0eb9ff4f0358a035d6a7",
+    "detectRadius": 1000,
+    "defaultLatitude": 34.0851002,
+    "defaultLongitude": -118.3768646,
+    "createdAt": "2015-10-01T19:24:56.305Z",
+    "updatedAt": "2015-10-01T19:24:56.305Z",
+    "id": "560d88881b2627e2f06e80e3"
+}]
 ```
