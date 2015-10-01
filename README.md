@@ -16,6 +16,9 @@
 ## [Notification](#Notification)
 
 * [Send notification](#send_notification)
+* [Mark a notification as read](#mark_notification_read)
+* [Get list of notification](#get_list_notification)
+* [Remove notification](#remove_notification)
 
 ## [Map](#Map)
 
@@ -239,6 +242,40 @@ post /notifications/send
 * OK: Status 200
 * Failed: Status 400 or 500
 
+### <a name='mark_notification_read'>Mark notification as read </a>
+```javascript
+post /notifications/read
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Body
+```javascript
+{
+  "notificationId":"5560122297db2f56e35887d76" //id of notification to mark, String, REQUIRED
+ }
+```
+
+#### Response
+```javascript
+[
+    {
+        "sender": "560cf0e4e33524f016a8d60c",
+        "recipient": "560cf0e4e33524f016a8d60c",
+        "message": "test",
+        "status": "received",
+        "archive": false,
+        "type": "real",
+        "createdAt": "2015-10-01T18:10:57.774Z",
+        "updatedAt": "2015-10-01T18:25:44.451Z",
+        "id": "560d78728bfcc5a2c8eec708"
+    }
+]
+```
 ## <a name="Map">Map</a>
 ### <a name='get_default_location'>Get default location</a>
 ```javascript
