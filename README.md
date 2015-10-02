@@ -297,9 +297,25 @@ get /notifications/getunread
 ```javascript
 [
     {
-        "sender": "560cf0e4e33524f016a8d60c",
+        "sender": {
+            "firstName": "hoa",
+            "lastName": "nguyen",
+            "state": "CA",
+            "country": "Vietnam",
+            "city": "Saigon",
+            "street": "Test street",
+            "language": "VI",
+            "archive": false,
+            "status": "active",
+            "type": "user",
+            "createdAt": "2015-10-01T08:37:56.282Z",
+            "updatedAt": "2015-10-01T08:37:56.293Z",
+            "id": "560cf0e4e33524f016a8d60c"
+        },
         "recipient": "560cf0e4e33524f016a8d60c",
         "message": "test",
+        "title":"A message from Droppin",
+        "code":0,
         "status": "pending",
         "archive": false,
         "type": "real",
@@ -308,8 +324,24 @@ get /notifications/getunread
         "id": "560d7bcc8bfcc5a2c8eec70a"
     },
     {
-        "sender": "560cf0e4e33524f016a8d60c",
+        "sender": {
+            "firstName": "hoa",
+            "lastName": "nguyen",
+            "state": "CA",
+            "country": "Vietnam",
+            "city": "Saigon",
+            "street": "Test street",
+            "language": "VI",
+            "archive": false,
+            "status": "active",
+            "type": "user",
+            "createdAt": "2015-10-01T08:37:56.282Z",
+            "updatedAt": "2015-10-01T08:37:56.293Z",
+            "id": "560cf0e4e33524f016a8d60c"
+        },
         "recipient": "560cf0e4e33524f016a8d60c",
+        "title":"A message from Droppin",
+        "code":0,
         "message": "test",
         "status": "failed",
         "archive": false,
