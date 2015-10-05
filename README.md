@@ -39,6 +39,7 @@
 
 ## [DocuSign](#DocuSign)
 * [Send DocuSign](#send docusign)
+* [Check for DocuSign status](#check_docusign_status)
 
 
 ## <a name="Registration">Registration</a>
@@ -789,4 +790,42 @@ post /docusign/send
         "id": "561250e9fce552d41926becb"
     }
 ]
+```
+### <a name='check_docusign_status'>Check for docusign status of account</a>
+```javascript
+get /docusign/status
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+```javascript
+{
+    "status": "completed",
+    "documentsUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/documents",
+    "recipientsUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/recipients",
+    "envelopeUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09",
+    "emailSubject": "[Action required - Dropin]",
+    "envelopeId": "f8db85dc-e7d6-4030-835d-f00eea6aac09",
+    "customFieldsUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/custom_fields",
+    "notificationUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/notification",
+    "enableWetSign": "true",
+    "allowMarkup": "false",
+    "allowReassign": "true",
+    "createdDateTime": "2015-10-05T10:37:43.3100000Z",
+    "lastModifiedDateTime": "2015-10-05T10:37:43.3100000Z",
+    "deliveredDateTime": "2015-10-05T10:38:28.3030000Z",
+    "sentDateTime": "2015-10-05T10:37:44.2800000Z",
+    "completedDateTime": "2015-10-05T10:38:39.6600000Z",
+    "statusChangedDateTime": "2015-10-05T10:38:39.6600000Z",
+    "documentsCombinedUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/documents/combined",
+    "certificateUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/documents/certificate",
+    "templatesUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/templates",
+    "purgeState": "unpurged"
+}
 ```
