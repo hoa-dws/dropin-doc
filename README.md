@@ -37,6 +37,9 @@
 * [Get account setting](#get_account_setting)
 * [Update account setting](#update_account_setting)
 
+## [DocuSign](#DocuSign)
+* [Send DocuSign](#send docusign)
+
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -755,4 +758,26 @@ post /accountsetting
     "updatedAt": "2015-10-01T19:24:56.305Z",
     "id": "560d88881b2627e2f06e80e3"
 }]
+```
+
+
+## <a name="DocuSign">DocuSign</a>
+
+### <a name='send docusign'>Send DocuSign</a>
+```javascript
+post /docusign/send
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+```javascript
+{
+   "message":"Ok"
+}
 ```
