@@ -206,7 +206,7 @@ post /devices/add
 ```javascript
  {
     "deviceAddress":"APA91bF4S5VIv9bg8katkkkh_4XJxI8j0efT5Dodgf95fVUSVsWbKZGyHgLwvOooJn1I", //String, REQUIRED
-    "deviveType":"android" //String, REQUIRED ['android', 'ios']
+    "deviceType":"android" //String, REQUIRED ['android', 'ios']
  }
  ```
 
