@@ -779,7 +779,7 @@ post /docusign/send
 
 #### Response
 ```javascript
-[
+
     {
         "account": "561238b17c2261981a565379",
         "taxFormId": "1234",
@@ -789,7 +789,7 @@ post /docusign/send
         "updatedAt": "2015-10-05T10:29:09.637Z",
         "id": "561250e9fce552d41926becb"
     }
-]
+
 ```
 ### <a name='check_docusign_status'>Check for docusign status of account</a>
 ```javascript
