@@ -31,6 +31,7 @@
 ## [Profile](#Profile)
 * [Get account profile](#get_account_profile)
 * [Update account profile](#update_account_profile)
+* [Deactivate account](#deactivate_account)
 
 ## [Setting](#Setting)
 * [Get account setting](#get_account_setting)
@@ -676,6 +677,25 @@ get /accounts/:accountId
     "id": "5608c5588a4e36915d59c9d2"
 }
 ```
+### <a name='deactivate_account'>Deactivate account</a>
+```javascript
+delete /accounts/:accountId
+```
+
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+```javascript
+Status 200: Success
+Status !=200: Failed
+```
+
 
 ## <a name="Setting">Setting</a>
 
