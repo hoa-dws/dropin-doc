@@ -576,7 +576,7 @@ post /map/operators/choosedefault
 
 ### <a name='update_account_profile'>Update account</a>
 ```javascript
-Patch /accounts/:accountId
+Put /accounts/:accountId
 ```
 #### Headers
 ```javascript
