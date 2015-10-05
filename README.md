@@ -531,7 +531,8 @@ get /map/operators/profile
         "account": "5608b452dbb0a09419db1d1a",
         "createdAt": "2015-09-28T03:53:07.786Z",
         "taxFormId":Not yet generated, will update later, please use fake data,
-        "vendorId":Not yet generated, will update later, please use fake data
+        "vendorId":Not yet generated, will update later, please use fake data, 
+        "status":"inactive"// ['inactive', 'pending', 'active'], inactive: docusign not sent, pending: docusing is sent, but not signed, active: docusign is signed
         "updatedAt": "2015-09-28T03:53:07.786Z",
         "id": "5608b9a34e8a66640c369df9"
     }
@@ -777,7 +778,15 @@ post /docusign/send
 
 #### Response
 ```javascript
-{
-   "message":"Ok"
-}
+[
+    {
+        "account": "561238b17c2261981a565379",
+        "taxFormId": "1234",
+        "vendorId": "1234",
+        "status": "pending",
+        "createdAt": "2015-10-05T10:28:57.092Z",
+        "updatedAt": "2015-10-05T10:29:09.637Z",
+        "id": "561250e9fce552d41926becb"
+    }
+]
 ```
