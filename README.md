@@ -43,6 +43,8 @@
 * [Send DocuSign](#send docusign)
 * [Check for DocuSign status](#check_docusign_status)
 
+##[Feedback](#Feedback)
+* [Send feedback](#send_feedback)
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -937,5 +939,47 @@ get /docusign/status
     "certificateUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/documents/certificate",
     "templatesUri": "/envelopes/f8db85dc-e7d6-4030-835d-f00eea6aac09/templates",
     "purgeState": "unpurged"
+}
+```
+
+
+## <a name="Feedback">Feedback</a>
+
+### <a name='send_feedback'>Send feedback</a>
+```javascript
+post /sendfeedback
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Body
+
+```javascript
+{
+  "title":"Test",
+  "content":"This is feedbacfdsgfdsgfdsgfdsgfdhgfdhgfdhgfdhhgfdhgfddsgk"
+}
+    
+```
+
+#### Response
+```javascript
+{
+    "account": "561238b17c2261981a565379",
+    "title": "Test",
+    "content": "This is feedbacfdsgfdsgfdsgfdsgfdhgfdhgfdhgfdhhgfdhgfddsgk",
+    "tags": [
+        "feedback"
+    ],
+    "archive": false,
+    "type": "real",
+    "createdAt": "2015-10-06T10:30:44.418Z",
+    "updatedAt": "2015-10-06T10:30:44.418Z",
+    "id": "5613a2d4ca0dc4e4160fe438"
 }
 ```
