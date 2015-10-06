@@ -358,7 +358,7 @@ get /notifications/getunread
 
 ### <a name='get_list_notification'>Get list of notification </a>
 ```javascript
-get /notifications/getunread
+get /notifications/getlist
 ```
 #### Headers
 ```javascript
@@ -424,6 +424,47 @@ get /notifications/getunread
 }
 ```
 
+### <a name='get_notification'>Get notification </a>
+```javascript
+get /notifications/get
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Query
+```javascript
+{
+"notificationId": '3243242432432432432432' //Stringr, required
+```
+
+#### Response
+```javascript
+{
+    "sender": {
+        "firstName": "Dropin",
+        "lastName": "",
+        "city": "LA",
+        "country": "USA",
+        "languate": "English",
+        "state": "CA",
+        "street": "Diamond"
+    },
+    "recipient": "561238b17c2261981a565379",
+    "message": "You have successfully signed in from new device",
+    "status": "received",
+    "code": 0,
+    "title": "A message from Droppin",
+    "archive": false,
+    "type": "real",
+    "createdAt": "2015-10-05T08:37:15.821Z",
+    "updatedAt": "2015-10-05T08:37:15.821Z",
+    "id": "561378d3f9932ddf5941ad5e"
+}
+```
 ### <a name='remove_notification'>Remove notification </a>
 ```javascript
 delete /notifications
