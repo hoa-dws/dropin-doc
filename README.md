@@ -864,6 +864,7 @@ post /accountsetting
     "detectRadius": 1000,
     "defaultLatitude": 34.0851002,
     "defaultLongitude": -118.3768646,
+    "numberOfNotificationPerPage": 20
     "createdAt": "2015-10-01T19:24:56.305Z",
     "updatedAt": "2015-10-01T19:24:56.305Z",
     "id": "560d88881b2627e2f06e80e3"
