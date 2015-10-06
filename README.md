@@ -322,7 +322,7 @@ get /notifications/getunread
             },
             "recipient": "561238b17c2261981a565379",
             "message": "You have successfully signed in from new device",
-            "status": "sent",
+            "status": "sent", //['pending', 'sent', 'failed', 'received'], pending: sending, sent: sent, failed: failed to send, received: sent and read
             "code": 0,
             "title": "A message from Droppin",
             "archive": false,
@@ -390,7 +390,7 @@ get /notifications/getlist
             },
             "recipient": "561238b17c2261981a565379",
             "message": "You have successfully signed in from new device",
-            "status": "sent",
+            "status": "sent", //['pending', 'sent', 'failed', 'received'], pending: sending, sent: sent, failed: failed to send, received: sent and read
             "code": 0,
             "title": "A message from Droppin",
             "archive": false,
@@ -455,7 +455,7 @@ get /notifications/get
     },
     "recipient": "561238b17c2261981a565379",
     "message": "You have successfully signed in from new device",
-    "status": "received",
+    "status": "received", //['pending', 'sent', 'failed', 'received'], pending: sending, sent: sent, failed: failed to send, received: sent and read
     "code": 0,
     "title": "A message from Droppin",
     "archive": false,
