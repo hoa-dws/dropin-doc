@@ -438,7 +438,8 @@ get /notifications/get
 #### Query
 ```javascript
 {
-"notificationId": '3243242432432432432432' //Stringr, required
+"notificationId": '3243242432432432432432' //String, required
+"update": 'true' //String, optional, the notification will automatically be marked as read if update=true
 ```
 
 #### Response
