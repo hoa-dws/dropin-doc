@@ -17,7 +17,9 @@
 
 * [Send notification](#send_notification)
 * [Mark a notification as read](#mark_notification_read)
+* [Get list of unread notification](#get_unread_list_notification)
 * [Get list of notification](#get_list_notification)
+* [Get notification](#get_notification)
 * [Remove notification](#remove_notification)
 
 ## [Map](#Map)
@@ -286,7 +288,7 @@ post /notifications/read
     }
 ]
 ```
-### <a name='get_list_notification'>Get list of unread notification </a>
+### <a name='get_unread_list_notification'>Get list of unread notification </a>
 ```javascript
 get /notifications/getunread
 ```
@@ -297,66 +299,131 @@ get /notifications/getunread
 "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
 }
 ```
+#### Query
+```javascript
+{
+"page": 0 //0-based page number, optional NUMBER default to 0,
+"number": 20 //number of record per page, optional NUMBER default to 20
+```
 
 #### Response
 ```javascript
-[
-    {
-        "sender": {
-            "firstName": "hoa",
-            "lastName": "nguyen",
-            "state": "CA",
-            "country": "Vietnam",
-            "city": "Saigon",
-            "street": "Test street",
-            "language": "VI",
+{
+    "messages": [
+        {
+            "sender": {
+                "firstName": "Dropin",
+                "lastName": "",
+                "city": "LA",
+                "country": "USA",
+                "languate": "English",
+                "state": "CA",
+                "street": "Diamond"
+            },
+            "recipient": "561238b17c2261981a565379",
+            "message": "You have successfully signed in from new device",
+            "status": "sent",
+            "code": 0,
+            "title": "A message from Droppin",
             "archive": false,
-            "status": "active",
-            "type": "user",
-            "createdAt": "2015-10-01T08:37:56.282Z",
-            "updatedAt": "2015-10-01T08:37:56.293Z",
-            "id": "560cf0e4e33524f016a8d60c"
+            "type": "real",
+            "createdAt": "2015-10-05T08:37:15.821Z",
+            "updatedAt": "2015-10-05T08:37:15.821Z",
+            "id": "561378fef9932ddf5941ad5f"
         },
-        "recipient": "560cf0e4e33524f016a8d60c",
-        "message": "test",
-        "title":"A message from Droppin",
-        "code":0,
-        "status": "pending",
-        "archive": false,
-        "type": "real",
-        "createdAt": "2015-10-01T18:10:57.774Z",
-        "updatedAt": "2015-10-01T18:10:57.774Z",
-        "id": "560d7bcc8bfcc5a2c8eec70a"
-    },
-    {
-        "sender": {
-            "firstName": "hoa",
-            "lastName": "nguyen",
-            "state": "CA",
-            "country": "Vietnam",
-            "city": "Saigon",
-            "street": "Test street",
-            "language": "VI",
+        {
+            "sender": {
+                "firstName": "Dropin",
+                "lastName": "",
+                "city": "LA",
+                "country": "USA",
+                "languate": "English",
+                "state": "CA",
+                "street": "Diamond"
+            },
+            "recipient": "561238b17c2261981a565379",
+            "message": "You have successfully signed in from new device",
+            "status": "sent",
+            "code": 0,
+            "title": "A message from Droppin",
             "archive": false,
-            "status": "active",
-            "type": "user",
-            "createdAt": "2015-10-01T08:37:56.282Z",
-            "updatedAt": "2015-10-01T08:37:56.293Z",
-            "id": "560cf0e4e33524f016a8d60c"
-        },
-        "recipient": "560cf0e4e33524f016a8d60c",
-        "title":"A message from Droppin",
-        "code":0,
-        "message": "test",
-        "status": "failed",
-        "archive": false,
-        "type": "real",
-        "createdAt": "2015-10-01T18:10:57.774Z",
-        "updatedAt": "2015-10-01T18:10:57.774Z",
-        "id": "560d7bd98bfcc5a2c8eec70b"
-    }
-]
+            "type": "real",
+            "createdAt": "2015-10-05T08:37:15.821Z",
+            "updatedAt": "2015-10-05T08:37:15.821Z",
+            "id": "561236bbe792a3ec137b34e7"
+        }
+    ]
+}
 ```
+
+### <a name='get_list_notification'>Get list of notification </a>
+```javascript
+get /notifications/getunread
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Query
+```javascript
+{
+"page": 0 //0-based page number, optional NUMBER default to 0,
+"number": 20 //number of record per page, optional NUMBER default to 20
+```
+
+#### Response
+```javascript
+{
+    "messages": [
+        {
+            "sender": {
+                "firstName": "Dropin",
+                "lastName": "",
+                "city": "LA",
+                "country": "USA",
+                "languate": "English",
+                "state": "CA",
+                "street": "Diamond"
+            },
+            "recipient": "561238b17c2261981a565379",
+            "message": "You have successfully signed in from new device",
+            "status": "sent",
+            "code": 0,
+            "title": "A message from Droppin",
+            "archive": false,
+            "type": "real",
+            "createdAt": "2015-10-05T08:37:15.821Z",
+            "updatedAt": "2015-10-05T08:37:15.821Z",
+            "id": "561378fef9932ddf5941ad5f"
+        },
+        {
+            "sender": {
+                "firstName": "Dropin",
+                "lastName": "",
+                "city": "LA",
+                "country": "USA",
+                "languate": "English",
+                "state": "CA",
+                "street": "Diamond"
+            },
+            "recipient": "561238b17c2261981a565379",
+            "message": "You have successfully signed in from new device",
+            "status": "sent",
+            "code": 0,
+            "title": "A message from Droppin",
+            "archive": false,
+            "type": "real",
+            "createdAt": "2015-10-05T08:37:15.821Z",
+            "updatedAt": "2015-10-05T08:37:15.821Z",
+            "id": "561236bbe792a3ec137b34e7"
+        }
+    ]
+}
+```
+
 ### <a name='remove_notification'>Remove notification </a>
 ```javascript
 delete /notifications
