@@ -581,7 +581,7 @@ get /map/operators
         "firstName": "hoa",
         "lastName": "nguyen",
         "archive": false,
-        "status": "active",
+        "status": "approved",
         "type": "user",
         "createdAt": "2015-09-22T08:49:46.021Z",
         "updatedAt": "2015-09-22T08:49:46.033Z",
@@ -644,7 +644,7 @@ get /map/operators/profile
         "createdAt": "2015-09-28T03:53:07.786Z",
         "taxFormId":Not yet generated, will update later, please use fake data,
         "vendorId":Not yet generated, will update later, please use fake data, 
-        "status":"inactive"// ['inactive', 'pending', 'active'], inactive: docusign not sent, pending: docusing is sent, but not signed, active: docusign is signed
+        "status":"unapproved"// ['unapproved', 'approved', 'banned', 'waiting'], waiting: docusign not sent, unapproved: docusign is sent, but not signed, approved: docusign is signed, banned: operator is banned
         "updatedAt": "2015-09-28T03:53:07.786Z",
         "id": "5608b9a34e8a66640c369df9"
     }
