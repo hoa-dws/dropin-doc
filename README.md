@@ -1063,4 +1063,94 @@ post /payment/addnonce
 }
 ```
 
+## <a name='get_payment_history'>Get payment history</a>
+```javascript
+get /payment/history
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+
+#### Response
+```javascript
+{
+    "payments": [
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.156Z",
+            "cost": 100,
+            "rating": 4
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.156Z",
+            "cost": 100,
+            "rating": 5
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 4
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 5
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 1
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 2
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 3
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 4
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 3
+        },
+        {
+            "firstName": "test",
+            "lastName": "test",
+            "date": "2015-10-08T10:28:02.157Z",
+            "cost": 100,
+            "rating": 1
+        }
+    ]
+}
+```
 
