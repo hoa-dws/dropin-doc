@@ -43,8 +43,11 @@
 * [Send DocuSign](#send docusign)
 * [Check for DocuSign status](#check_docusign_status)
 
-##[Feedback](#Feedback)
-* [Send feedback](#send_feedback)
+## [Feedback](#Feedback)
+* [Send feedback](#send_feedback) 
+
+## [Payment](#Payment)
+* [Check for credit card status](#check_cc_status)
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -983,3 +986,27 @@ post /sendfeedback
     "id": "5613a2d4ca0dc4e4160fe438"
 }
 ```
+
+
+## <a name="Payment">Payment</a>
+
+### <a name='check_cc_status'>Check for credit card status</a>
+```javascript
+get /payment/check
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+
+#### Response
+```javascript
+{
+  "paymentStatus":'ok' // ['ok', 'banned', 'not available']
+}
+```
+
