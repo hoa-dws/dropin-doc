@@ -49,6 +49,8 @@
 ## [Payment](#Payment)
 * [Get token](#get_token)
 * [Check for credit card status](#check_cc_status)
+* [Add nonce](#add_nonce)
+* [Get payment history](#get_payment_history)
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -1032,4 +1034,33 @@ get /payment/token
 
 }
 ```
+## <a name='add_nonce'>Add nonce</a>
+```javascript
+post /payment/addnonce
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+
+#### Body
+
+```javascript
+{
+  "nonce":"1312321"
+}
+    
+```
+
+#### Response
+```javascript
+{
+    "message": 'ok'
+}
+```
+
 
