@@ -59,7 +59,7 @@
 ## <a name="Fake api">Fake api</a>
 ### <a name="fake_update_map">Fake api update map </a>
 ```javascript
-post /accounts
+post /map/addfakelocation
 ```
 #### Body
 ```javascript
