@@ -1,5 +1,9 @@
 # NOTE: For manually testing, please add ?debug=true at the end each request made to get full info.
 # dropin-doc
+
+## [Fake api](#Fake api)
+* [Update map for fake operator](#fake_update_map)
+
 ## [Registration](#Registration)
 
 * [Create new account](#new_account)
@@ -51,6 +55,28 @@
 * [Check for credit card status](#check_cc_status)
 * [Add nonce](#add_nonce)
 * [Get payment history](#get_payment_history)
+
+## <a name="Fake api">Fake api</a>
+### <a name="fake_update_map">Fake api update map </a>
+```javascript
+post /accounts
+```
+#### Body
+```javascript
+{
+  "latitude":12,
+  "longitude":14
+}
+
+```
+
+#### Response
+```javascript
+{
+    "lat": 12,
+    "long": 14
+}
+```
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
