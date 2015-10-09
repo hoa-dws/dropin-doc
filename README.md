@@ -532,7 +532,7 @@ post /map/location/default
 ```
 ### <a name='add_new_location'>Add new location to account</a>
 ```javascript
-post /map
+post /map/location
 ```
 #### Headers
 ```javascript
