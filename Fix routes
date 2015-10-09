@@ -1,1 +1,1 @@
-post /map TO post /map/addlocation
+post /map ---> post /map/addlocation
