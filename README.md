@@ -56,6 +56,7 @@
 
 ## [Streaming](#Streaming)
 * [Get streaming token](#get_streaming_token)
+* [Stream has been started](#stream_started)
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -1189,4 +1190,31 @@ post /streams/gettoken
     "sessionId": "2_MX40NTMzMTY0Mn5-MTQ0NDQ1MjkzNDg3MH4xVTlOVXorWnNkdnludW85WHZFanBldUh-fg"
 }
 ```
+post /streams/streamstarted
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Body
+```javascript
+{
+  "userId":"56188896f534e3781aa5798d",
+  "operatorId":"56188896f534e3781aa5798d",
+  "token":"T1==cGFydG5lcl9pZD00NTMzMTY0MiZzaWc9NGM5YjdlN2VhMDI0NjAwMjE1NGE4MmU3YzdlNWIwNDg2ZDhmODY5MjpzZXNzaW9uX2lkPTJfTVg0ME5UTXpNVFkwTW41LU1UUTBORFExTWprek5EZzNNSDR4VlRsT1ZYb3JXbk5rZG5sdWRXODVXSFpGYW5CbGRVaC1mZyZjcmVhdGVfdGltZT0xNDQ0NDUyOTM0Jm5vbmNlPTAuMTI1NDY3NDExMDA5NTk0OCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDQ1MDU3NzM0JmNvbm5lY3Rpb25fZGF0YT11c2VySWQlM0Q1NjE4ODg5NmY1MzRlMzc4MWFhNTc5OGQlM0JvcGVyYXRvcklkJTNENTYxODg4OTZmNTM0ZTM3ODFhYTU3OThk",
+  "sessionId":"2_MX40NTMzMTY0Mn5-MTQ0NDQ1MjkzNDg3MH4xVTlOVXorWnNkdnludW85WHZFanBldUh-fg"
+}
+```
+
+
+#### Response
+```javascript
+{
+   "message":"ok"
+}
+```
+
 
