@@ -31,6 +31,10 @@
 * [Search for operator](#search_for_operator)
 * [Get profile of operator](#get_profile_operator)
 * [Choose default operator](#choose_default_operator)
+* [Request Operator](#request_operator)
+* [Response Request](#response_request)
+* [Get Oparator Location](#get_operator_location)
+* [Remove location](#remove_location)
 
 ## [Profile](#Profile)
 * [Get account profile](#get_account_profile)
@@ -701,6 +705,123 @@ post /map/operators/choosedefault
     }
 }
 ```
+### <a name='request_operator'>Request Operator</a>
+
+Request operator for streaming a location
+
+```javascript
+post /map/operators/:accountId/request
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Params
+- `accountId`: The requestor id
+
+#### Body
+```javascript
+{
+  "operatorId": 1, // Operator Id, REQUIRED
+  "long":40.24, //Float, REQUIRED
+  "lat":50.24 //Float, REQUIRED
+}
+```
+#### Response
+```javascript
+{
+    "message": "Success message"
+}
+```
+
+### <a name='response_request'>Response Request</a>
+
+Response to streaming request.
+
+```javascript
+post /map/operators/:opearatorId/response
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Params
+- `opearatorId`: The operator id
+
+#### Body
+```javascript
+{
+  "requestor": 1, // The requestor id response to, REQUIRED
+  "action": "accept",   // Either 'accept' or 'reject' REQUIRED
+  "message": "response message", // The response message, OPTIONAL
+}
+```
+#### Response
+```javascript
+{
+    "message": "Success message"
+}
+```
+
+### <a name='get_operator_location'>Get Oparator Location</a>
+
+Get operator location. Call this API within interval time to track operator location after get accepted
+
+```javascript
+get /map/operators/:operatorId/location
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Params
+- `operatorId`: The operator id
+
+#### Response
+```javascript
+{
+    "lastTime": "2015-09-23T07:20:56.108Z",
+    "latitude": 12343.56,
+    "longitude": 1243.56
+}
+```
+
+### <a name='remove_location'>Remove location</a>
+Remove location of operator. Call this API when user logout.
+
+```javascript
+delete /map/operators/:operatorId/location
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Params
+- `operatorId`: The operator id
+
+#### Response
+Deleted location
+```javascript
+{
+    "lastTime": "2015-09-23T07:20:56.108Z",
+    "latitude": 12343.56,
+    "longitude": 1243.56
+}
+```
+
+
 ## <a name="Profile">Profile</a>
 
 ### Note: Body *id* must match with params *id*
