@@ -1190,7 +1190,10 @@ post /streams/gettoken
     "sessionId": "2_MX40NTMzMTY0Mn5-MTQ0NDQ1MjkzNDg3MH4xVTlOVXorWnNkdnludW85WHZFanBldUh-fg"
 }
 ```
+## <a name='stream_started'>Stream started</a>
+
 post /streams/streamstarted
+
 ```
 #### Headers
 ```javascript
