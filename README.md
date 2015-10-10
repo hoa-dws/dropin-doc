@@ -58,6 +58,7 @@
 * [Get streaming token](#get_streaming_token)
 * [Stream has been started](#stream_started)
 * [Stream has been received](#stream_received)
+* [Stream finished](#stream_finished)
 
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
@@ -1249,6 +1250,36 @@ post /streams/streamreceived
    "message":"ok"
 }
 ```
+
+## <a name='stream_finished'>Stream finished</a>
+
+post /streams/streamfinished
+
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Body
+```javascript
+{
+  "operatorId":"56188896f534e3781aa5798d",
+  "userId":"54j5k43hj54k34354354l"
+}
+```
+
+
+#### Response
+```javascript
+{
+   "message":"ok"
+}
+```
+
+
 
 
 
