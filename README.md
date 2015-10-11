@@ -740,6 +740,7 @@ post /map/operators/:accountId/request
 #### Push message to operator
 ```javascript
 {
+    "code": 4,
     "title": "Request for streaming",
     "location": { "long":40.24, "lat":50.24 }, // the request location
     "id": "5608b452dbb0a09419db1d1a", // ID of requestor
@@ -780,10 +781,11 @@ post /map/operators/:opearatorId/response
 }
 ```
 
-#### Push message to operator
+#### Push message to viewer
 ```javascript
 {
     "action": "accept", // Either 'accept' or 'reject'
+    "code": 5,
     "message": "Hoa accepted your request", // Message from operator
     "title": "Request for streaming",
     "id": "5608b452dbb0a09419db1d1a", // ID of operator
