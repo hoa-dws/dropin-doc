@@ -1413,7 +1413,8 @@ post /streams//streamexit
 ```javascript
 {
   "operatorId":"56188896f534e3781aa5798d",
-  "userId":"54j5k43hj54k34354354l"
+  "userId":"54j5k43hj54k34354354l",
+  "type":"operator" // ['viewer','operator']
 }
 ```
 
