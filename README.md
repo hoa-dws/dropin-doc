@@ -1399,7 +1399,7 @@ post /streams/streamreceived
 
 ## <a name='stream_finished'>Stream finished</a>
 
-post /streams/streamfinished
+post /streams//streamexit
 
 ```
 #### Headers
