@@ -737,6 +737,17 @@ post /map/operators/:accountId/request
 }
 ```
 
+#### Push message to operator
+```javascript
+{
+    "title": "Request for streaming",
+    "location": { "long":40.24, "lat":50.24 }, // the request location
+    "id": "5608b452dbb0a09419db1d1a", // ID of requestor
+    "firstName": "Trinh", // First name of requestor
+    "lastName": "Thai" // last name of requestor
+}
+```
+
 ### <a name='response_request'>Response Request</a>
 
 Response to streaming request.
@@ -766,6 +777,18 @@ post /map/operators/:opearatorId/response
 ```javascript
 {
     "message": "Success message"
+}
+```
+
+#### Push message to operator
+```javascript
+{
+    "action": "accept", // Either 'accept' or 'reject'
+    "message": "Hoa accepted your request", // Message from operator
+    "title": "Request for streaming",
+    "id": "5608b452dbb0a09419db1d1a", // ID of operator
+    "firstName": "Trinh", // First name of operator
+    "lastName": "Thai" // last name of operator
 }
 ```
 
