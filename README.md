@@ -10,6 +10,7 @@
 
 * [Login](#login)
 * [Verify](#verify)
+* [Logout](#logout)
 
 ## [Device](#Device)
 
@@ -216,6 +217,25 @@ post /login/verify
     }
 }
 ```
+### <a name='logout'>Logout</a>
+```javascript
+post /logout
+```
+#### Body
+```javascript
+{
+  "deviceAddress":"12345678" //String, REQUIRED
+  
+}
+```
+#### Response
+```javascript
+{
+    "message":"ok"
+}
+```
+
+
 ## <a name="Device">Device</a>
 ### <a name='new_device'>Add new device to an account</a>
 ```javascript
