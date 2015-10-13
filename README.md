@@ -682,7 +682,7 @@ get /map/operators/profile
         "createdAt": "2015-09-28T03:53:07.786Z",
         "taxFormId":Not yet generated, will update later, please use fake data,
         "vendorId":Not yet generated, will update later, please use fake data, 
-        "status":"unapproved"// ['unapproved', 'approved', 'banned', 'waiting'], waiting: docusign not sent, unapproved: docusign is sent, but not signed, approved: docusign is signed, banned: operator is banned
+        "status":"unapproved"// ['unapproved', 'approved', 'banned', 'waiting','approved-first-time'], waiting: docusign not sent, unapproved: docusign is sent, but not signed, approved: docusign is signed, banned: operator is banned
         "updatedAt": "2015-09-28T03:53:07.786Z",
         "id": "5608b9a34e8a66640c369df9"
     }
