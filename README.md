@@ -1208,7 +1208,7 @@ get /payment/token
 
 }
 ```
-## <a name='add_nonce'>Add nonce</a>
+## <a name='add_nonce'>Add credit card nonce</a>
 ```javascript
 post /payment/handlePaymentMethodNonce
 ```
