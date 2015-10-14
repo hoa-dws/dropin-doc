@@ -1183,7 +1183,8 @@ get /payment/getPaymentMethod
 #### Response
 ```javascript
 {
-    "paymentStatus": true //[true, false] true: card ok, false: no card or invalid
+    "paymentStatus": true //[true, false] true: card ok, false: no card or invalid,
+    "code": 2 //[0, 1, 2] 0: expired, 1: no cc, 2 :ok
 }
 ```
 ## <a name='get_token'>Get token</a>
