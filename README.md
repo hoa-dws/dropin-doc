@@ -55,7 +55,7 @@
 
 ## [Payment](#Payment)
 * [Get token](#get_token)
-* [Check for credit card status](#check_cc_status)
+* [Check for payment status](#check_cc_status)
 * [Add nonce](#add_nonce)
 * [Get payment history](#get_payment_history)
 
@@ -1167,9 +1167,9 @@ post /sendfeedback
 
 ## <a name="Payment">Payment</a>
 
-### <a name='check_cc_status'>Check for credit card status</a>
+### <a name='check_cc_status'>Check for payment status</a>
 ```javascript
-get /payment/check
+get /payment/getPaymentMethod
 ```
 #### Headers
 ```javascript
@@ -1183,7 +1183,56 @@ get /payment/check
 #### Response
 ```javascript
 {
-  "paymentStatus":'ok' // ['ok', 'banned', 'not available']
+    "payments": [
+        {
+            "billingAddress": {
+                "id": "8g",
+                "customerId": "561cc3b13cadf3e82657ee85",
+                "firstName": null,
+                "lastName": null,
+                "company": null,
+                "streetAddress": null,
+                "extendedAddress": null,
+                "locality": null,
+                "region": null,
+                "postalCode": "94107",
+                "countryCodeAlpha2": null,
+                "countryCodeAlpha3": null,
+                "countryCodeNumeric": null,
+                "countryName": null,
+                "createdAt": "2015-10-14T03:48:47Z",
+                "updatedAt": "2015-10-14T03:48:47Z"
+            },
+            "bin": "401288",
+            "cardType": "Visa",
+            "cardholderName": null,
+            "commercial": "Unknown",
+            "countryOfIssuance": "USA",
+            "createdAt": "2015-10-14T03:48:47Z",
+            "customerId": "561cc3b13cadf3e82657ee85",
+            "customerLocation": "US",
+            "debit": "Unknown",
+            "default": true,
+            "durbinRegulated": "Unknown",
+            "expirationMonth": "12",
+            "expirationYear": "2020",
+            "expired": false,
+            "healthcare": "Unknown",
+            "imageUrl": "https://assets.braintreegateway.com/payment_method_logo/visa.png?environment=sandbox",
+            "issuingBank": "Unknown",
+            "last4": "1881",
+            "payroll": "Unknown",
+            "prepaid": "No",
+            "subscriptions": [],
+            "token": "9n7csb",
+            "uniqueNumberIdentifier": "60264ac57bc9b29b428f4724c45eb690",
+            "updatedAt": "2015-10-14T03:48:47Z",
+            "venmoSdk": false,
+            "verifications": [],
+            "maskedNumber": "401288******1881",
+            "expirationDate": "12/2020"
+        }
+    ]
 }
 ```
 ## <a name='get_token'>Get token</a>
