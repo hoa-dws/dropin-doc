@@ -702,8 +702,8 @@ post /map/operators/choosedefault
 #### Body
 ```javascript
 {
-  "long":40.24, //Float, REQUIRED
-  "lat":50.24 //Float, REQUIRED
+  "longitude":40.24, //Float, REQUIRED
+  "latitude":50.24 //Float, REQUIRED
 }
 ```
 #### Response
