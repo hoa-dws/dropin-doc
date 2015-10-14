@@ -56,7 +56,7 @@
 ## [Payment](#Payment)
 * [Get token](#get_token)
 * [Check for payment status](#check_cc_status)
-* [Add nonce](#add_nonce)
+* [Handle payment method nonce](#add_nonce)
 * [Get payment history](#get_payment_history)
 
 ## [Streaming](#Streaming)
@@ -1259,7 +1259,7 @@ get /payment/token
 ```
 ## <a name='add_nonce'>Add nonce</a>
 ```javascript
-post /payment/addnonce
+post /payment/handlePaymentMethodNonce
 ```
 #### Headers
 ```javascript
