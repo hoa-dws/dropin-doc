@@ -746,8 +746,8 @@ post /map/operators/:accountId/request
 ```javascript
 {
   "operatorId": 1, // Operator Id, REQUIRED
-  "long":40.24, //Float, REQUIRED
-  "lat":50.24 //Float, REQUIRED
+  "longitude":40.24, //Float, REQUIRED
+  "latitude":50.24 //Float, REQUIRED
 }
 ```
 #### Response
