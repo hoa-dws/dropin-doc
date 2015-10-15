@@ -53,7 +53,7 @@
 ## [Feedback](#Feedback)
 * [Send feedback](#send_feedback) 
 
-## [Payment](#Payment)
+## [payment statusnt](#Payment)
 * [Get token](#get_token)
 * [Check for payment status](#check_cc_status)
 * [Handle payment method nonce](#add_nonce)
@@ -1184,7 +1184,148 @@ get /payment/getPaymentMethod
 ```javascript
 {
     "paymentStatus": true //[true, false] true: card ok, false: no card or invalid,
-    "code": 2 //[0, 1, 2] 0: expired, 1: no cc, 2 :ok
+    "code": 2, //[0, 1, 2] 0: expired, 1: no cc, 2 :ok
+     "payments": [
+        {
+            "billingAddress": {
+                "id": "6y",
+                "customerId": "561e26b0120620d003e8ca5d",
+                "firstName": null,
+                "lastName": null,
+                "company": null,
+                "streetAddress": null,
+                "extendedAddress": null,
+                "locality": null,
+                "region": null,
+                "postalCode": "94107",
+                "countryCodeAlpha2": null,
+                "countryCodeAlpha3": null,
+                "countryCodeNumeric": null,
+                "countryName": null,
+                "createdAt": "2015-10-15T03:54:04Z",
+                "updatedAt": "2015-10-15T03:54:04Z"
+            },
+            "bin": "401288",
+            "cardType": "Visa",
+            "cardholderName": null,
+            "commercial": "Unknown",
+            "countryOfIssuance": "USA",
+            "createdAt": "2015-10-15T03:54:04Z",
+            "customerId": "561e26b0120620d003e8ca5d",
+            "customerLocation": "US",
+            "debit": "Unknown",
+            "default": true,
+            "durbinRegulated": "Unknown",
+            "expirationMonth": "12",
+            "expirationYear": "2020",
+            "expired": false,
+            "healthcare": "Unknown",
+            "imageUrl": "https://assets.braintreegateway.com/payment_method_logo/visa.png?environment=sandbox",
+            "issuingBank": "Unknown",
+            "last4": "1881",
+            "payroll": "Unknown",
+            "prepaid": "No",
+            "subscriptions": [],
+            "token": "jfzmdg",
+            "uniqueNumberIdentifier": "60264ac57bc9b29b428f4724c45eb690",
+            "updatedAt": "2015-10-15T03:54:04Z",
+            "venmoSdk": false,
+            "verifications": [
+                {
+                    "status": "verified",
+                    "cvvResponseCode": "M",
+                    "avsErrorResponseCode": null,
+                    "avsPostalCodeResponseCode": "M",
+                    "avsStreetAddressResponseCode": "I",
+                    "gatewayRejectionReason": null,
+                    "merchantAccountId": "dropin",
+                    "processorResponseCode": "1000",
+                    "processorResponseText": "Approved",
+                    "id": "63fyq4",
+                    "billing": {
+                        "firstName": null,
+                        "lastName": null,
+                        "company": null,
+                        "streetAddress": null,
+                        "extendedAddress": null,
+                        "locality": null,
+                        "region": null,
+                        "postalCode": "94107",
+                        "countryName": null
+                    },
+                    "creditCard": {
+                        "token": "jfzmdg",
+                        "bin": "401288",
+                        "last4": "1881",
+                        "cardType": "Visa",
+                        "expirationMonth": "12",
+                        "expirationYear": "2020",
+                        "customerLocation": "US",
+                        "cardholderName": null,
+                        "uniqueNumberIdentifier": "60264ac57bc9b29b428f4724c45eb690",
+                        "prepaid": "No",
+                        "healthcare": "Unknown",
+                        "debit": "Unknown",
+                        "durbinRegulated": "Unknown",
+                        "commercial": "Unknown",
+                        "payroll": "Unknown",
+                        "issuingBank": "Unknown",
+                        "countryOfIssuance": "USA",
+                        "productId": "Unknown"
+                    },
+                    "createdAt": "2015-10-15T03:54:04Z",
+                    "updatedAt": "2015-10-15T03:54:04Z"
+                }
+            ],
+            "maskedNumber": "401288******1881",
+            "expirationDate": "12/2020",
+            "verification": {
+                "status": "verified",
+                "cvvResponseCode": "M",
+                "avsErrorResponseCode": null,
+                "avsPostalCodeResponseCode": "M",
+                "avsStreetAddressResponseCode": "I",
+                "gatewayRejectionReason": null,
+                "merchantAccountId": "dropin",
+                "processorResponseCode": "1000",
+                "processorResponseText": "Approved",
+                "id": "63fyq4",
+                "billing": {
+                    "firstName": null,
+                    "lastName": null,
+                    "company": null,
+                    "streetAddress": null,
+                    "extendedAddress": null,
+                    "locality": null,
+                    "region": null,
+                    "postalCode": "94107",
+                    "countryName": null
+                },
+                "creditCard": {
+                    "token": "jfzmdg",
+                    "bin": "401288",
+                    "last4": "1881",
+                    "cardType": "Visa",
+                    "expirationMonth": "12",
+                    "expirationYear": "2020",
+                    "customerLocation": "US",
+                    "cardholderName": null,
+                    "uniqueNumberIdentifier": "60264ac57bc9b29b428f4724c45eb690",
+                    "prepaid": "No",
+                    "healthcare": "Unknown",
+                    "debit": "Unknown",
+                    "durbinRegulated": "Unknown",
+                    "commercial": "Unknown",
+                    "payroll": "Unknown",
+                    "issuingBank": "Unknown",
+                    "countryOfIssuance": "USA",
+                    "productId": "Unknown"
+                },
+                "createdAt": "2015-10-15T03:54:04Z",
+                "updatedAt": "2015-10-15T03:54:04Z"
+            }
+        }
+    ]
 }
 ```
 ## <a name='get_token'>Get token</a>
