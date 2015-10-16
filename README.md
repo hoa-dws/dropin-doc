@@ -36,7 +36,7 @@
 * [Response Request](#response_request)
 * [Get Oparator Location](#get_operator_location)
 * [Remove location](#remove_location)
-* [Get request status](#get request status)
+* [Get request status](#get_request_status)
 
 ## [Profile](#Profile)
 * [Get account profile](#get_account_profile)
