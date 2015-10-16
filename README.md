@@ -36,6 +36,7 @@
 * [Response Request](#response_request)
 * [Get Oparator Location](#get_operator_location)
 * [Remove location](#remove_location)
+* [Get request status](#get request status)
 
 ## [Profile](#Profile)
 * [Get account profile](#get_account_profile)
@@ -865,7 +866,35 @@ Deleted location
     "longitude": 1243.56
 }
 ```
+### <a name='remove_location'>Remove location</a>
+Remove location of operator. Call this API when user logout.
 
+```javascript
+get /map/checkStream
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+#### Params
+- `operatorId`: The operator id
+
+#### Response
+Success error code is 200
+```javascript
+{
+    "id":"rtewtrtretre32432432432432" //ID of operator/requestor
+}
+```
+Failure means no request
+```javascript
+{
+    "message":"Damn it"
+}
+```
 
 ## <a name="Profile">Profile</a>
 
