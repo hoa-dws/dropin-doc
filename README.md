@@ -866,8 +866,8 @@ Deleted location
     "longitude": 1243.56
 }
 ```
-### <a name='remove_location'>Remove location</a>
-Remove location of operator. Call this API when user logout.
+### <a name='get_request_status'>Get request status</a>
+
 
 ```javascript
 get /map/checkStream
@@ -879,8 +879,7 @@ get /map/checkStream
 "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
 }
 ```
-#### Params
-- `operatorId`: The operator id
+
 
 #### Response
 Success error code is 200
