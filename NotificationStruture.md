@@ -1,16 +1,7 @@
 
 # Notification structure
 
-## DocuSign Approved
-```javascript
 
-{
-	code:1,
-	title:'DocuSign Form Approved!',
-	message:'DocuSign Form Approved!'
-}
-
-```
 
 ## Stream has been started from droperator
 ```javascript
@@ -58,4 +49,14 @@ location:
   userId: viewerId/operatorId,
   title: 'Stream has finished'
 }
+```
+## DocuSign Approved
+```javascript
+
+{
+	code:6,
+	title:'DocuSign Form Approved!',
+	message:'DocuSign Form Approved!'
+}
+
 ```
