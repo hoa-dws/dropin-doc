@@ -26,3 +26,25 @@ location:
    }
 }
 ```
+
+## Response from the droperator for the requested stream
+```javascript
+{
+   code:5
+   id: operatorId,
+   firstName:"Hoa",
+   lastName:"Nguyen",
+   title:"Request for streaming",
+   action:'accept' or 'deny',
+   message:'accepted from ....'
+}
+```
+## Stream finished (both sent to operator and viewer)
+```javascript
+
+{
+  code: 3,
+  userId: viewerId/operatorId,
+  title: 'Stream has finished'
+}
+```
