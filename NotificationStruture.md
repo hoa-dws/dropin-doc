@@ -7,6 +7,7 @@
 ```javascript
 {
    code: 2,
+   messageId:'1234',
    operatorId: operatorId,
    token: token,
    apiKey: opentokConfig.apiKey,
@@ -18,6 +19,7 @@
 {
 code:4
 id: viewerId,
+messageId:'1234',
 firstName:"Hoa",
 lastName:"Nguyen",
 title:"Request for streaming",
@@ -35,6 +37,7 @@ location:
    code:5
    id: operatorId,
    firstName:"Hoa",
+   messageId:'1234',
    lastName:"Nguyen",
    title:"Request for streaming",
    action:'accept' or 'deny',
@@ -46,6 +49,7 @@ location:
 
 {
   code: 3,
+  messageId:'1234',
   userId: viewerId/operatorId,
   title: 'Stream has finished'
 }
@@ -55,6 +59,7 @@ location:
 
 {
 	code:6,
+	messageId:'1234',
 	title:'DocuSign Form Approved!',
 	message:'DocuSign Form Approved!'
 }
