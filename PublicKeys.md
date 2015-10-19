@@ -5,3 +5,9 @@
 	"subcribeKey":"sub-c-973a4246-73d7-11e5-960b-02ee2ddab7fe"
 }
 ```
+## OpenTok
+```javascript
+"opentok": {
+	"apiKey": "45331642"
+}
+```
