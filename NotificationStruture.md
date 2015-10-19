@@ -1,6 +1,17 @@
 
 # Notification structure
 
+## DocuSign Approved
+```javascript
+
+{
+	code:1,
+	title:'DocuSign Form Approved!',
+	message:'DocuSign Form Approved!'
+}
+
+```
+
 ## Stream has been started from droperator
 ```javascript
 {
