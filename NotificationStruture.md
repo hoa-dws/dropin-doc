@@ -91,3 +91,14 @@ location:
 }
 
 ```
+## New location for operator 
+```javascript
+	code: 9,
+	messageId: '432423432432',
+	operatorId: operatorId,
+	location: {
+		longitude:'43.434343',
+		latitude:'34.43434343'
+	},
+	settingRadius:radius
+```
