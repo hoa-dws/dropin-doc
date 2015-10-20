@@ -65,3 +65,25 @@ location:
 }
 
 ```
+## Viewer list returned after operator adds location
+```javascript
+
+{
+	code:7,
+	messageId:'1234',
+	message:'Viewer list'
+	viewerIds: ['5453543543543543', '543543543543543543'] //list of channel of viewer.
+}
+
+```
+## New operator return to viewer 
+```javascript
+
+{
+	code:8,
+	messageId:'1234',
+	message:'New operator'
+	operatorId: '5453543543543543' //channel name of operator
+}
+
+```
