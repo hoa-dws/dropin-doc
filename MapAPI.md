@@ -55,7 +55,8 @@ post /map/addlocation
 ```javascript
 {
   "longitude":40.24, //Float, REQUIRED
-  "latitude":50.24 //Float, REQUIRED
+  "latitude":50.24 //Float, REQUIRED,
+  "settingRadius":50.22 //FLoat, REQUIRED
 }
 ```
 #### Response
