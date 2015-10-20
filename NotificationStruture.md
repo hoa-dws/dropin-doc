@@ -102,3 +102,8 @@ location:
 	},
 	settingRadius:radius
 ```
+## Switch operator to viewer
+```javascript
+	code: 10,
+	operatorId: operatorId,
+```
