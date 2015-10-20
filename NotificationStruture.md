@@ -83,7 +83,11 @@ location:
 	code:8,
 	messageId:'1234',
 	message:'New operator'
-	operatorId: '5453543543543543' //channel name of operator
+	operatorId: '5453543543543543' //channel name of operator,
+	location:{
+		longitude: '13.4343434343',
+		latitude:  '12.3232323232'
+	}
 }
 
 ```
