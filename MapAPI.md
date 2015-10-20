@@ -15,7 +15,9 @@
 * [Response Request](#response_request)
 * [Get Oparator Location](#get_operator_location)
 * [Remove location](#remove_location)
-* [Get request status](#get_request_status)
+* [Set user (viewer/operator) online](#set_online)
+* [Set user (viewer/operator) offline](#set_offline)
+
 
 ## <a name="Map">Map</a>
 ### <a name='get_default_location'>Get default location</a>
@@ -339,5 +341,48 @@ Deleted location
     "lastTime": "2015-09-23T07:20:56.108Z",
     "latitude": 12343.56,
     "longitude": 1243.56
+}
+```
+
+## <a name='set_online'>Set a user to online</a>
+
+```javascript
+post /map/setonline
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+
+```javascript
+{
+    "message":"ok"
+}
+```
+
+
+## <a name='set_offline'>Set a user to offline</a>
+
+```javascript
+post /map/setoffline
+```
+#### Headers
+```javascript
+{
+"Content-Type":"application/json",
+"Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
+}
+```
+
+#### Response
+
+```javascript
+{
+    "message":"ok"
 }
 ```
