@@ -64,13 +64,7 @@ post /map/addlocation
 {
     "latitude": 123,
     "longitude": 123456,
-    "account": "5601274dd47400694e8c0682",
-    "archive": false,
-    "visibility": "private",
-    "type": "real",
-    "createdAt": "2015-09-23T07:58:19.667Z",
-    "updatedAt": "2015-09-23T07:58:19.667Z",
-    "id": "56025b9b4f19fd534de2fc28"
+    "viewerIds": ['5453543543543543', '543543543543543543']
 }
 ```
 ### <a name='search_for_operator'>Search for operators in 2,000m radius (default by server)</a>
