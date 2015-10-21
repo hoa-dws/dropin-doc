@@ -1240,8 +1240,9 @@ post /streams//streamexit
   "operatorId":"56188896f534e3781aa5798d",
   "userId":"54j5k43hj54k34354354l",
   "type":"operator" // ['viewer','operator'],
-  "durationStreaming":"2323" //Minutes
-  "distanceRouting":"32.4324" //Kilometres
+  "durationStreaming":"2323" //Seconds
+  "distanceRouting":"32.4324" //Kilometres,
+  "price":"123144"
 }
 ```
 
