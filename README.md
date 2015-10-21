@@ -1239,7 +1239,9 @@ post /streams//streamexit
 {
   "operatorId":"56188896f534e3781aa5798d",
   "userId":"54j5k43hj54k34354354l",
-  "type":"operator" // ['viewer','operator']
+  "type":"operator" // ['viewer','operator'],
+  "durationStreaming":"2323" //Minutes
+  "durationRouting":"324324" //Minutes
 }
 ```
 
