@@ -51,7 +51,10 @@ location:
   code: 3,
   messageId:'1234',
   userId: viewerId/operatorId,
-  title: 'Stream has finished'
+  title: 'Stream has finished',
+  durationStreaming: durationStreaming,
+  distanceRouting: distanceRouting,
+  price: price
 }
 ```
 ## DocuSign Approved
