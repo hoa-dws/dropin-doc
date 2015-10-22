@@ -54,7 +54,8 @@ location:
   title: 'Stream has finished',
   durationStreaming: durationStreaming,
   distanceRouting: distanceRouting,
-  price: price
+  price: price,
+  ratingId: "432432432432432"
 }
 ```
 ## DocuSign Approved
