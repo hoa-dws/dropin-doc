@@ -1249,7 +1249,11 @@ post /streams//streamexit
 #### Response
 ```javascript
 {
-   "message":"ok"
+   "operatorId":"56188896f534e3781aa5798d",
+  "userId":"54j5k43hj54k34354354l",
+  "price":"32132",
+  "durationStreaming":"2323" //Seconds
+  "distanceRouting":"32.4324" //Kilometres
 }
 ```
 
