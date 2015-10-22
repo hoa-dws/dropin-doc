@@ -53,6 +53,11 @@
 * [Stream has been received](#stream_received)
 * [Stream finished](#stream_finished)
 
+## [Rating](#Rating)
+* Rate stream(#rate_stream)
+
+
+
 ## <a name="Registration">Registration</a>
 ### <a name="new_account">Create new account </a>
 ```javascript
@@ -1262,12 +1267,35 @@ post /streams//streamexit
    "operatorId":"56188896f534e3781aa5798d",
   "userId":"54j5k43hj54k34354354l",
   "price":"32132",
-  "durationStreaming":"2323" //Seconds
-  "distanceRouting":"32.4324" //Kilometres
+  "durationStreaming":"2323", //Seconds
+  "distanceRouting":"32.4324",//Kilometres
+  "ratingId":"43243243245fsgfdgf"
 }
 ```
 
 
+# <a name="Rating">Rating</a>
+### <a name="rate_stream">Rate stream </a>
 
+
+```javascript
+post /streams/ratestream
+```
+#### Body
+```javascript
+{"type":"viewer",
+ "ratingId":"56288ff5ae4b218c1daec071",
+ "rate":"4"
+ }
+```
+#### Response
+{
+    "durationStreaming": "250",
+    "distanceRouting": 0.01,
+    "userId": "56287974cf8107681ba1ac1c",
+    "operatorId": "56287b6d68f5e96bd5250116",
+    "price": 4,
+    "ratingId": "56289dcfae964ed81d8dd931"
+}
 
 
