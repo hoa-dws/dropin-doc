@@ -54,7 +54,7 @@
 * [Stream finished](#stream_finished)
 
 ## [Rating](#Rating)
-* Rate stream(#rate_stream)
+* [Rate stream](#rate_stream)
 
 
 
