@@ -1289,6 +1289,7 @@ post /streams/ratestream
  }
 ```
 #### Response
+```javascript
 {
     "durationStreaming": "250",
     "distanceRouting": 0.01,
@@ -1297,5 +1298,5 @@ post /streams/ratestream
     "price": 4,
     "ratingId": "56289dcfae964ed81d8dd931"
 }
-
+```
 
