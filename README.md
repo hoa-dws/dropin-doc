@@ -1064,70 +1064,80 @@ get /payment/history
             "lastName": "test",
             "date": "2015-10-08T10:28:02.156Z",
             "cost": 100,
-            "rating": 4
+            "rating": 4,
+            "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.156Z",
             "cost": 100,
-            "rating": 5
+            "rating": 5,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 4
+            "rating": 4,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 5
+            "rating": 5,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 1
+            "rating": 1,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 2
+            "rating": 2,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 3
+            "rating": 3,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 4
+            "rating": 4,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 3
+            "rating": 3,
+             "transactionType":"viewer/operator"
         },
         {
             "firstName": "test",
             "lastName": "test",
             "date": "2015-10-08T10:28:02.157Z",
             "cost": 100,
-            "rating": 1
+            "rating": 1,
+             "transactionType":"viewer/operator"
         }
     ]
 }
