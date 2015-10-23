@@ -1285,7 +1285,8 @@ post /streams/ratestream
 ```javascript
 {"type":"viewer",
  "ratingId":"56288ff5ae4b218c1daec071",
- "rate":"4"
+ "rate":"4",
+ "videoUrl":"http://www.xxx.xyz"
  }
 ```
 #### Response
