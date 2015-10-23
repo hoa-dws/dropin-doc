@@ -67,7 +67,7 @@ post /map/addlocation
     "viewerIds": ['5453543543543543', '543543543543543543']
 }
 ```
-### <a name='search_for_operator'>Search for operators in 2,000m radius (default by server)</a>
+### <a name='search_for_operator'>Search for operators</a>
 ```javascript
 get /map/operators
 ```
