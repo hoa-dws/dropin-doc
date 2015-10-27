@@ -1,0 +1,1 @@
+Get Braintree token: get /payment/token ---> get /purchase/token
