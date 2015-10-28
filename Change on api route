@@ -1,2 +1,4 @@
 Get Braintree token: get /payment/token ---> get /purchase/token
 Get payment method: get /payment/getpaymentmethod ---> get /purchase/getpaymentmethod
+
+Update location     post /map/addlocation ----> post /map
