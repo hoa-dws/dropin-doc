@@ -122,7 +122,7 @@ get /map/operators
 ```
 ### <a name='get_profile_operator'>Get profile of operator</a>
 ```javascript
-get /map/operators/profile
+get /operators/:accountId
 ```
 #### Headers
 ```javascript
@@ -131,7 +131,7 @@ get /map/operators/profile
 "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
 }
 ```
-#### Query
+#### Params
 ```javascript
 {
   "accountId":"4gfdgfddfdfdf", //String, REQUIRED
