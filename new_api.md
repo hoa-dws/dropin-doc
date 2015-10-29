@@ -92,10 +92,18 @@ Controllers expose Drop-In's REST API.
     - [POST /gigs/**<gigId>**/stop](#post-gigsgigidstop)
         - [CURL](#curl)
         - [Response](#response)
+- [Operators](#operator)
+    - [GET /operators/**<accountId>**](#get-accountsaccountid)
+        - [CURL](#curl)
+        - [Response](#response)
 - [Streams](#streams)
 - [PaymentOptions](#paymentoptions)
 - [Ratings](#ratings)
 - [DocuSign](#docusign)
+- [Purchase](#purchase)
+    - [GET /purchases/token](#get-purchasestoken)
+        - [CURL](#curl)
+        - [Response](#response)
 
 # Account
 
@@ -144,7 +152,7 @@ Adds a DropIn Account
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "firstName": "test", "lastName": "test", "identities": [ { "type": "email", "value": "test@test.com" }, { "type": "phone", "value": "5551234567" } ]}' 'https://localhost/accounts'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "firstName": "test", "lastName": "test", "identities": [ { "type": "email", "value": "test@test.com" }, { "type": "phone", "value": "5551234567" } ]}' 'https://dev.dropin-api.dws.la/accounts'```
 
 ### Response
 
@@ -171,7 +179,7 @@ Searches DropIn Accounts based on criteria:
 
 ### CURL
 
-```curl -XGET -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "firstName": "test", "lastName": "test" }' 'https://localhost/accounts'```
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "firstName": "test", "lastName": "test" }' 'https://dev.dropin-api.dws.la/accounts'```
 
 ### Response
 
@@ -183,7 +191,7 @@ Searches DropIn Accounts based on an **<accountId>**.
 
 ### CURL
 
-```curl -XGET -H 'Accept-encoding: application/json' -H "Content-type: application/json" 'https://localhost/accounts/1'```
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dev.dropin-api.dws.la/accounts/1'```
 
 ### Response
 
@@ -210,7 +218,7 @@ Adds a DropIn Account
 
 ### CURL
 
-```curl -XPATCH -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "firstName": "test", "lastName": "test" }' 'https://localhost/accounts/1'```
+```curl -XPATCH -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "firstName": "test", "lastName": "test" }' 'https://dev.dropin-api.dws.la/accounts/1'```
 
 ### Response
 
@@ -222,7 +230,7 @@ Archives a DropIn Account
 
 ### CURL
 
-```curl -XDELETE -H 'Accept-encoding: application/json' -H "Content-type: application/json" 'https://localhost/accounts/1'```
+```curl -XDELETE -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dev.dropin-api.dws.la/accounts/1'```
 
 ### Response
 
@@ -251,7 +259,7 @@ Confirms DropIn Account credentials and generates an Access Token
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "phone": "5551234567", "email": "test@test.com" }' 'https://localhost/login'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "phone": "5551234567", "email": "test@test.com" }' 'https://dev.dropin-api.dws.la/login'```
 
 ## POST /login/verify
 
@@ -271,7 +279,7 @@ Verifies the DropIn account is attached to a phone
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "tokenId": "1", "code": "7392" }' 'https://localhost/login/verify'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "tokenId": "5631bcd7719431923dd9ad9f", "code": "7392" }' 'https://dev.dropin-api.dws.la/login/verify'```
 
 # Devices
 
@@ -300,7 +308,7 @@ Adds a device to a DropIn Account
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "address": "???", "type": "???" }' 'https://localhost/devices'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "address": "???", "type": "???" }' 'https://dev.dropin-api.dws.la/devices'```
 
 ### Response
 
@@ -312,7 +320,7 @@ Archives a device
 
 ### CURL
 
-```curl -XDELETE -H 'Accept-encoding: application/json' -H "Content-type: application/json" 'https://localhost/devices/1'```
+```curl -XDELETE -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dev.dropin-api.dws.la/devices/1'```
 
 ### Response
 
@@ -348,7 +356,7 @@ Updates a Notification
 
 ### CURL
 
-```curl -XPATCH -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "type": "unread" }' 'https://localhost/notifications/1'```
+```curl -XPATCH -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "type": "unread" }' 'https://dev.dropin-api.dws.la/notifications/1'```
 
 ### Response
 
@@ -371,7 +379,7 @@ Searches DropIn Accounts based on criteria:
 
 ### CURL
 
-```curl -XGET -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "status": "read" }' 'https://localhost/notifications'```
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "status": "read" }' 'https://dev.dropin-api.dws.la/notifications'```
 
 ### Response
 
@@ -399,6 +407,7 @@ Updates the DropIn map with an Account's location.
 |sig|Signal strength|Integer|true|undefined|All|
 |opr|Is Account Operator?|Boolean|true|undefined|All|
 |net|Network type (0 = 2G, 1 = G, 2 = E, 3 = 3G, 4 = H, 5 = H+6, 6 = H+7, 7 = H+8, 8 = H+9, 9 = H+10, 10 = 4GLTE, 11 = 4GLTE-A)|Integer|true|undefined|All|
+|rad|The radius the operator is willing to engage in?|Integer|true|undefined|All|
 
 ### Response
 
@@ -406,7 +415,7 @@ true
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "lat": 0.012, "lng": 0.012, "bty": 100, "sig": 50, "opr" true, "net": 1 }' 'https://localhost/map'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "lat": 0.012, "lng": 0.012, "bty": 100, "sig": 50, "opr" true, "net": 1 }' 'https://dev.dropin-api.dws.la/map'```
 
 ## GET /map
 
@@ -476,7 +485,7 @@ Searches Gigs based on criteria:
 
 ### CURL
 
-```curl -XGET -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "status": "voted", "duration": 60 }' 'https://localhost/gigs'```
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "status": "voted", "duration": 60 }' 'https://dev.dropin-api.dws.la/gigs'```
 
 ### Response
 
@@ -488,7 +497,7 @@ Searches Gigs based on an **<gigId>**.
 
 ### CURL
 
-```curl -XGET -H 'Accept-encoding: application/json' -H "Content-type: application/json" 'https://localhost/gigs/1'```
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dev.dropin-api.dws.la/gigs/1'```
 
 ### Response
 
@@ -505,7 +514,7 @@ Creates a Gig Object
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "latitude": "1.02", "longitude": "1.03" }' 'https://localhost/gigs'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "latitude": "1.02", "longitude": "1.03" }' 'https://dev.dropin-api.dws.la/gigs'```
 
 ## Response
 
@@ -524,7 +533,7 @@ Allows a Droperator to claim a Gig
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "response": "accept" }' 'https://localhost/gigs/1/claim'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "response": "accept" }' 'https://dev.dropin-api.dws.la/gigs/1/claim'```
 
 ### Response
 
@@ -542,7 +551,7 @@ Allows a Customer to confirm that they are ready to start a claimed Gig
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" -d '{ "paymentMethodNonce": "lkjabshdliuhbvilsublsevsfvsaervrh" }' 'https://localhost/gigs/1/confirm'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" -d '{ "paymentMethodNonce": "lkjabshdliuhbvilsublsevsfvsaervrh" }' 'https://dev.dropin-api.dws.la/gigs/1/confirm'```
 
 ### Response
 
@@ -556,7 +565,7 @@ Allows a Droperator to start the Gig once they are within range
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" 'https://localhost/gigs/1/start'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dev.dropin-api.dws.la/gigs/1/start'```
 
 ### Response
 
@@ -571,7 +580,7 @@ Allows a Droperator or Customer to stop a Gig
 
 ### CURL
 
-```curl -XPOST -H 'Accept-encoding: application/json' -H "Content-type: application/json" 'https://localhost/gigs/1/stop'```
+```curl -XPOST -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dev.dropin-api.dws.la/gigs/1/stop'```
 
 ### Response
 
@@ -579,6 +588,24 @@ Allows a Droperator or Customer to stop a Gig
 |:----|:----------|:--:|:-------------:|
 |gig|Gig Object|Gig|Self, Customer|
 |price|How much the gig cost|String|Self, Customer|
+
+# Operators
+
+## GET /operators/**<accountId>**
+
+Gets operator information about an account based on an **<accountId>**.
+
+### CURL
+
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dropin-api-dev.dws.la/operators/1'```
+
+### Response
+
+|Field|Description|Type|Role Visibility|
+|:----|:----------|:--:|:-------------:|
+|id|Operator Id|String|Self, Customer|
+|taxformId|The DocuSign ID of the tax form the operator has signed|String|Self|
+|vendorId|The Bill.com vendor ID the operator has.|String|Self|
 
 # Streams
 
@@ -590,18 +617,52 @@ Coming soon!
 
 # Ratings
 
-'get /ratings': 'RatingController.search',
-  'get /ratings/:ratingId': 'RatingController.get',
-  'post /ratings': 'RatingController.create',
-  'put /ratings/:ratingId': 'RatingController.overwrite',
-  'patch /ratings/:ratingId': 'RatingController.update',
-  'delete /ratings/:ratingId': 'RatingController.archive',
+Coming soon!
+
+> 'get /ratings': 'RatingController.search',
+> 'get /ratings/:ratingId': 'RatingController.get',
+> 'post /ratings': 'RatingController.create',
+> 'put /ratings/:ratingId': 'RatingController.overwrite',
+> 'patch /ratings/:ratingId': 'RatingController.update',
+> 'delete /ratings/:ratingId': 'RatingController.archive',
 
 # DocuSign
 
-'post /docusign':'DocuSignController.hook',
-  'get /docusign/status':'DocuSignController.checkDocuSignStatus',
-  'post /docusign/send':'DocuSignController.sendDocuSign',
-  'post /sendfeedback':'FeedbackController.sendFeedback'
+Coming soon!
 
----------------------------------
+> 'post /docusign':'DocuSignController.hook',
+>  'get /docusign/status':'DocuSignController.checkDocuSignStatus',
+>  'post /docusign/send':'DocuSignController.sendDocuSign',
+>  'post /sendfeedback':'FeedbackController.sendFeedback'
+
+# Purchase
+
+Allows users to manage the purchasing of Gigs.
+
+## GET /purchases/token
+
+Gets a Braintree Token:
+
+### CURL
+
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dropin-api-dev.dws.la/purchases/token'```
+
+### Response
+
+|Field|Description|Type|Role Visibility|
+|:----|:----------|:--:|:-------------:|
+|clientToken|Braintree access token|String|Self|
+
+## GET /purchases/paymentMethods
+
+Returns all Braintree payment methods associated with an account:
+
+### CURL
+
+```curl -XGET -k -H'Accept-encoding: application/json' -k -H"Content-type: application/json" 'https://dropin-api-dev.dws.la/purchases/paymentMethods'```
+
+### Response
+
+|Field|Description|Type|Role Visibility|
+|:----|:----------|:--:|:-------------:|
+|clientToken|Braintree access token|String|Self|
