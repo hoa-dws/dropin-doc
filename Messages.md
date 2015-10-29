@@ -1,8 +1,7 @@
 ```javascript
 module.exports.messages = {
     duplicateEmailAndPhone:{
-      code:'400',
-      errorCode: 1,
+      code:'400',e
       identifier:'E_EMAIL_PHONE_EXIST',
       message:'Looks like you already have an account. Log in to continue.'
     },
@@ -82,13 +81,11 @@ module.exports.messages = {
         message: 'User not found.'
     },
     emailNotFound: {
-        errorCode: 2,
         code: '404',
         identifier: 'E_EMAIL_NOT_FOUND',
         message: 'Invalid phone number or email. Please try again.'
     },
     phoneMatchFailure: {
-        errorCode:3,
         code: '404',
         identifier: 'E_PHONE_NUMBER_NOT_FOUND',
         message: 'Invalid phone number or email. Please try again.'
