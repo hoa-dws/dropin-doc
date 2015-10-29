@@ -837,7 +837,7 @@ post /sendfeedback
 
 ### <a name='check_cc_status'>Check for payment status</a>
 ```javascript
-get /payment/getPaymentMethod
+get /purchases/paymentMethods
 ```
 #### Headers
 ```javascript
@@ -851,8 +851,8 @@ get /payment/getPaymentMethod
 #### Response
 ```javascript
 {
-    "paymentStatus": true //[true, false] true: card ok, false: no card or invalid,
-    "code": 2, //[0, 1, 2] 0: expired, 1: no cc, 2 :ok
+   
+    "code": 'CARD_OK', //['CARD_OK', 'ALL_CARDS_EXPIRED', 'NO_CARD'] 0: expired, 1: no cc, 2 :ok
      "payments": [
         {
             "billingAddress": {
