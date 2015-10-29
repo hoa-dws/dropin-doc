@@ -140,25 +140,15 @@ get /map/operators/profile
 #### Response
 ```javascript
 {
-    "account": {
-        "firstName": "hoa",
-        "lastName": "nguyen",
-        "archive": false,
-        "status": "active",
-        "type": "user",
-        "createdAt": "2015-09-28T03:30:26.212Z",
-        "updatedAt": "2015-09-28T03:30:26.219Z",
-        "id": "5608b452dbb0a09419db1d1a"
-    },
-    "operator": {
-        "account": "5608b452dbb0a09419db1d1a",
+   
+       
         "createdAt": "2015-09-28T03:53:07.786Z",
         "taxFormId":Not yet generated, will update later, please use fake data,
         "vendorId":Not yet generated, will update later, please use fake data, 
         "status":"unapproved"// ['unapproved', 'approved', 'banned', 'waiting','approved-first-time'], waiting: docusign not sent, unapproved: docusign is sent, but not signed, approved: docusign is signed, banned: operator is banned
         "updatedAt": "2015-09-28T03:53:07.786Z",
         "id": "5608b9a34e8a66640c369df9"
-    }
+    
 }
 ```
 ### <a name='choose_default_operator'>Choose default operator</a>
