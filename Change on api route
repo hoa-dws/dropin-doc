@@ -4,3 +4,5 @@ Get payment method: get /payment/getpaymentmethod ---> get /purchase/getpaymentm
 Update location     post /map/addlocation ----> post /map
 
 Get operator profile get /map/operator/profile?accountId='432432423432' ----> get /operator/profile
+
+Get payment status get /payment/getPaymentMethod ---->get /purchases/paymentmethods
