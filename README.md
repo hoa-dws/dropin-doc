@@ -324,7 +324,7 @@ patch notifications/:notificationId
 ```
 ### <a name='get_unread_list_notification'>Get list of unread notification </a>
 ```javascript
-get /notifications?status=received
+get /notifications?status=sent
 ```
 #### Headers
 ```javascript
