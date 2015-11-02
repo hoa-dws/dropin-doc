@@ -289,7 +289,7 @@ post /notifications/send
 
 ### <a name='mark_notification_read'>Mark notification as read </a>
 ```javascript
-post /notifications/read
+patch notifications/:notificationId
 ```
 #### Headers
 ```javascript
@@ -301,7 +301,8 @@ post /notifications/read
 #### Body
 ```javascript
 {
-  "notificationId":"5560122297db2f56e35887d76" //id of notification to mark, String, REQUIRED
+  "status":"received",
+  "id":SHOUD BE THE SAME TO NOTIFICATIONID //id of notification to mark, String, REQUIRED
  }
 ```
 
