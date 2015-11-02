@@ -324,7 +324,7 @@ patch notifications/:notificationId
 ```
 ### <a name='get_unread_list_notification'>Get list of unread notification </a>
 ```javascript
-get /notifications/getunread
+get /notifications?status=received
 ```
 #### Headers
 ```javascript
@@ -332,12 +332,6 @@ get /notifications/getunread
 "Content-Type":"application/json",
 "Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiI1NjAxMWUxOTdkYjJmNTZlMzU4ODdkNmYiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTQ0MjkxNDE0NiwiYXVkIjoiZHJvcGluLmNvbSIsImlzcyI6ImRyb3Bpbi5jb20ifQ.wt4P_elQAR8DIsLJPb8OENb8nfTb4aYdmEzu_3I8Hlk"
 }
-```
-#### Query
-```javascript
-{
-"page": 0 //0-based page number, optional NUMBER default to 0,
-"number": 20 //number of record per page, optional NUMBER default to 20
 ```
 
 #### Response
