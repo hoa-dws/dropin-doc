@@ -386,7 +386,7 @@ get /notifications?status=received
 
 ### <a name='get_list_notification'>Get list of notification </a>
 ```javascript
-get /notifications?status=received
+get /notifications?status=sent
 ```
 #### Headers
 ```javascript
